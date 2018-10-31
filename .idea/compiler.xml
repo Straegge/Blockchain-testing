@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BlockchainTesting" />
+        <module name="ThePangaeaParadigm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="BlockchainTesting" target="1.8" />
+      <module name="ThePangaeaParadigm" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
