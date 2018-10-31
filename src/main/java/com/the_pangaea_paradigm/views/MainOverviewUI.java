@@ -24,7 +24,6 @@ public class MainOverviewUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         final VerticalLayout structureLayout = new VerticalLayout();
-
         final HorizontalLayout header = new Header();
         final HorizontalLayout hero = new Hero();
         final HorizontalLayout description = new Description();

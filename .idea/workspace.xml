@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4f0b6e3-860c-48ba-a832-9db7bfd31638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ipfs_java_ipfs_api_v1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ipld_java_cid_v1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_multiformats_java_multiaddr_v1_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_multiformats_java_multibase_v1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_multiformats_java_multihash_v1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/FooterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeaderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeroService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ipfs/IPFSStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/MainOverviewUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Description.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Footer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Header.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Hero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Usage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/web3j/Web3jStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Wallet/UTC--2018-10-25T06-54-43.266000000Z--cd0b165deedf8a086f71c712c08e61b11637b0e7.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlockchainTesting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BlockchainTesting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockchain/MainUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/contracts/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/contracts/Greeter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/contracts/Mortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/contracts/Mortal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI$MainUIServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI$MainUIServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,14 +58,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1784" />
-          <entry key="txt" value="79" />
+          <entry key="txt" value="116" />
           <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1784" />
-          <entry key="PLAIN_TEXT" value="79" />
+          <entry key="PLAIN_TEXT" value="116" />
           <entry key="XML" value="11" />
         </counts>
       </usages-collector>
@@ -294,9 +269,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541026019896" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541026857874" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BlockchainTesting" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -360,12 +335,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540397083510</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixes Project Setup to adequate form.">
+      <created>1541026086612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541026086612</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24786781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -383,7 +364,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Amazon EC2" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -397,12 +378,39 @@
       <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.13752665" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Use Tomcat instead of Jetty for testing (to comply with Eclipse usage)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Use Tomcat instead of Jetty for testing (to comply with Eclipse usage)." />
+    <MESSAGE value="Fixes Project Setup to adequate form." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes Project Setup to adequate form." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
