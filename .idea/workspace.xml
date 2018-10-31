@@ -2,8 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4f0b6e3-860c-48ba-a832-9db7bfd31638" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ipfs_java_ipfs_api_v1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ipld_java_cid_v1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_multiformats_java_multiaddr_v1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_multiformats_java_multibase_v1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_multiformats_java_multihash_v1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/FooterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeaderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeroService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ipfs/IPFSStarter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/MainOverviewUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Description.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Footer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Header.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Hero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Usage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/web3j/Web3jStarter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Wallet/UTC--2018-10-25T06-54-43.266000000Z--cd0b165deedf8a086f71c712c08e61b11637b0e7.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlockchainTesting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BlockchainTesting.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockchain/MainUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/contracts/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/contracts/Greeter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/contracts/Mortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/contracts/Mortal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI$MainUIServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI$MainUIServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/blockchain/MainUI.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,29 +72,43 @@
     <session id="1748751816">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="txt" value="8" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="1784" />
+          <entry key="txt" value="79" />
+          <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="8" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="1784" />
+          <entry key="PLAIN_TEXT" value="79" />
+          <entry key="XML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="2" />
+          <entry key="java" value="48" />
+          <entry key="json" value="3" />
+          <entry key="sol" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="48" />
+          <entry key="JSON" value="3" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -79,15 +117,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/blockchain/MainUI.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/MainOverviewUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+            <state relative-caret-position="306">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>send</find>
+      <find>web3cl</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +149,30 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Greeter.java" />
         <option value="$PROJECT_DIR$/src/main/java/contracts/Greeter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blockchain/MainUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/UI/MainUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/web3j/Web3jStarter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ipfs/IPFSStarter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ui/MainUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ui/main_overview_components/Header.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ui/main_overview_components/Hero.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ui/main_overview_components/Description.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ui/main_overview_components/Usage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ui/main_overview_components/Footer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ui/MainOverviewUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/view/MainOverviewUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/MainOverviewUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/MainOverviewServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeaderServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeaderService.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -136,6 +210,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,7 +243,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="the_pangaea_paradigm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blockchain-testing" type="b2602c69:ProjectViewProjectNode" />
@@ -175,7 +251,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
+              <item name="the_pangaea_paradigm" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blockchain-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blockchain-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="the_pangaea_paradigm" type="462c0819:PsiDirectoryNode" />
+              <item name="ipfs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blockchain-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blockchain-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="the_pangaea_paradigm" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blockchain-testing" type="b2602c69:ProjectViewProjectNode" />
@@ -184,18 +279,29 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Blockchain-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blockchain-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Wallet" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540396092101" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541026019896" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BlockchainTesting" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.the_pangaea_paradigm.ui.main_overview_components" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -247,30 +353,40 @@
       <option name="presentableId" value="Default" />
       <updated>1540395823876</updated>
     </task>
+    <task id="LOCAL-00001" summary="Use Tomcat instead of Jetty for testing (to comply with Eclipse usage).">
+      <created>1540397083510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540397083510</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24786781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Amazon EC2" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17678958" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28416485" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Amazon EC2" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -284,31 +400,286 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Use Tomcat instead of Jetty for testing (to comply with Eclipse usage)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use Tomcat instead of Jetty for testing (to comply with Eclipse usage)." />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="MavenRunConfiguration">
+        <watch expression="contract.greet()" language="JAVA" />
+        <watch expression="contract.isValid()" language="JAVA" />
+        <watch expression="contract.greet().send()" language="JAVA" />
+        <watch expression="contractBinary == Greeter.BINARY" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>contractBinary == Greeter.BINARY</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>contract.greet().send()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>contract.load()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>contract.greet().sendAsync()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>contract.isValid()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>contract.greet()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>0xDb371cAAC083dA45A04c153e818405a412e095B4</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BlockchainTesting.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/contracts/Greeter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Wallet/UTC--2018-10-23T05-42-46.256000000Z--db371caac083da45a04c153e818405a412e095b4.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Wallet/UTC--2018-10-25T06-54-43.266000000Z--cd0b165deedf8a086f71c712c08e61b11637b0e7.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/web3j/core/3.6.0/core-3.6.0.jar!/org/web3j/protocol/core/RemoteCall.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        <state relative-caret-position="193">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/contracts/Mortal.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/concurrent/Callable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/web3j/core/3.6.0/core-3.6.0-sources.jar!/org/web3j/protocol/core/RemoteCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/web3j/core/3.6.0/core-3.6.0-sources.jar!/org/web3j/tx/Contract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="326" column="75" selection-start-line="326" selection-start-column="75" selection-end-line="326" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Greeter.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.5.2/vaadin-server-8.5.2-sources.jar!/com/vaadin/ui/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="833" column="28" selection-start-line="833" selection-start-column="28" selection-end-line="833" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/web3j/core/3.6.0/core-3.6.0-sources.jar!/org/web3j/protocol/core/methods/request/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/web3j/core/3.6.0/core-3.6.0-sources.jar!/org/web3j/protocol/core/Ethereum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="149" column="21" selection-start-line="149" selection-start-column="21" selection-end-line="149" selection-end-column="21" />
+        <state relative-caret-position="954">
+          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blockchain/MainUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/contracts/Mortal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+        <state relative-caret-position="18">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/contracts/Greeter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/web3j/Web3jStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/ipfs/IPFSStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.5.2/vaadin-server-8.5.2-sources.jar!/com/vaadin/ui/VerticalLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Header.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Hero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Description.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Usage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/main_overview_components/Footer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/javax/servlet/annotation/WebServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1-sources.jar!/javax/servlet/annotation/WebServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.5.2/vaadin-server-8.5.2-sources.jar!/com/vaadin/server/DeploymentConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.5.2/vaadin-server-8.5.2-sources.jar!/com/vaadin/server/VaadinService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="166" column="32" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.5.2/vaadin-server-8.5.2-sources.jar!/com/vaadin/server/VaadinServletService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.5.2/vaadin-server-8.5.2-sources.jar!/com/vaadin/annotations/VaadinServletConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.5.2/vaadin-server-8.5.2-sources.jar!/com/vaadin/server/VaadinServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/MainOverviewServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeaderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/FooterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/controllers/HeroService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/the_pangaea_paradigm/views/MainOverviewUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

@@ -29,6 +29,10 @@
 			<id>vaadin-addons</id>
 			<url>http://maven.vaadin.com/vaadin-addons</url>
 		</repository>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
 	</repositories>
 
 	<dependencyManagement>
@@ -44,6 +48,11 @@
 	</dependencyManagement>
 
 	<dependencies>
+        <dependency>
+            <groupId>com.github.ipfs</groupId>
+            <artifactId>java-ipfs-api</artifactId>
+            <version>v1.2.2</version>
+        </dependency>
 		<dependency>
 			<groupId>org.web3j</groupId>
 			<artifactId>core</artifactId>

@@ -1,4 +1,4 @@
-package contracts;
+package com.the_pangaea_paradigm.contracts;
 
 import org.web3j.abi.TypeReference;
 import org.web3j.abi.datatypes.Function;
