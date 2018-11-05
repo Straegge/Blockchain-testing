@@ -19,5 +19,5 @@ ToDos
 
 1. Connect to IPFS through Infura and add a first file. Figure out how the connection works and how to retrieve data permanently (database necessary after all?).
 2. Connect Web3j to IPFS and do some tests in a live build. Try to find existing projects that have already done this.
-3. Build the UI.
-4. Bind the HIGH PRIO use cases (creating an AcOP, creating a PIO, applying to a project/organization) to IPFS. This means figuring out a constructive, maintainable and retrievable way of storing the data.
+3. Bind the HIGH PRIO use cases (creating an AcOP, creating a PIO, applying to a project/organization) to IPFS. This means figuring out a constructive, maintainable and retrievable way of storing the data.
+4. Build the UI in a userfriendly and responsive way.
