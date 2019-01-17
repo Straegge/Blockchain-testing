@@ -1,4 +1,4 @@
-package com.the_pangaea_paradigm.contracts;
+package com.the_pangaea_paradigm.business.contracts;
 
 import org.web3j.abi.EventEncoder;
 import org.web3j.abi.FunctionEncoder;

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.ipfs:java-ipfs-api:v1.2.3-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ipfs/java-ipfs-api/v1.2.3-SNAPSHOT/java-ipfs-api-v1.2.3-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ipfs/java-ipfs-api/v1.2.3-SNAPSHOT/java-ipfs-api-v1.2.3-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/ipfs/java-ipfs-api/v1.2.3-SNAPSHOT/java-ipfs-api-v1.2.3-SNAPSHOT-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../java-ipfs-api/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../java-ipfs-api/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

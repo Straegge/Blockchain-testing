@@ -1,7 +1,7 @@
-package com.the_pangaea_paradigm.web3j;
+package com.the_pangaea_paradigm.business.web3j;
 
-import com.the_pangaea_paradigm.contracts.Greeter;
-import com.the_pangaea_paradigm.views.MainOverviewUI;
+import com.the_pangaea_paradigm.business.contracts.Greeter;
+import com.the_pangaea_paradigm.mvp.views.MainOverview;
 import com.vaadin.external.org.slf4j.Logger;
 import com.vaadin.external.org.slf4j.LoggerFactory;
 import org.web3j.crypto.CipherException;
@@ -22,7 +22,7 @@ import java.math.BigDecimal;
 
 public class Web3jStarter {
 
-    private static final Logger log = LoggerFactory.getLogger(MainOverviewUI.class);
+    private static final Logger log = LoggerFactory.getLogger(MainOverview.class);
 
     public Web3jStarter() {
 
@@ -44,7 +44,7 @@ public class Web3jStarter {
         try {
             credentials = WalletUtils.loadCredentials(
                     "etherWalletPassword",
-                    System.getProperty("user.dir") + "\\src\\main\\resources\\Wallet\\UTC--2018-10-25T06-54-43.266000000Z--cd0b165deedf8a086f71c712c08e61b11637b0e7.json");
+                    System.getProperty("user.dir") + "\\src\\servlets\\resources\\Wallet\\UTC--2018-10-25T06-54-43.266000000Z--cd0b165deedf8a086f71c712c08e61b11637b0e7.json");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (CipherException e) {

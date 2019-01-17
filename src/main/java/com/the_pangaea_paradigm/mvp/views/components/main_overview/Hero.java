@@ -1,4 +1,4 @@
-package com.the_pangaea_paradigm.views.main_overview_components;
+package com.the_pangaea_paradigm.mvp.views.components.main_overview;
 
 import com.vaadin.ui.HorizontalLayout;
 
