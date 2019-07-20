@@ -10,6 +10,7 @@
 *.tar.gz
 *.rar
 
+target/*
 .iml
 .idea/modules
 .idea/codeStyles
