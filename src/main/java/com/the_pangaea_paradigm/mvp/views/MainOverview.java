@@ -24,7 +24,7 @@ public class MainOverview extends VerticalLayout {
         final HorizontalLayout usage = new Usage();
         final HorizontalLayout footer = new Footer();
 
-        add(new Button("Lolz"));
+        add(new Button("Test"));
         add(header, hero, description, usage, footer);
     }
 
