@@ -1,12 +1,22 @@
 package com.the_pangaea_paradigm.ui;
 
-import com.vaadin.flow.component.Text;
-import com.vaadin.flow.component.html.Div;
+import com.the_pangaea_paradigm.ui.components.global.Header;
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("some")
-public class ProjectPage extends Div {
+@Route("projects")
+public class ProjectPage extends VerticalLayout {
     public ProjectPage() {
-        add(new Text("lol works"));
+        style();
+
+        final Component header = new Header();
+
+        add(header);
+    }
+
+    private void style() {
+        setMargin(false);
+        setPadding(false);
     }
 }

@@ -1,7 +1,10 @@
 package com.the_pangaea_paradigm.ui;
 
-import com.the_pangaea_paradigm.ui.components.global.TPPButton;
-import com.the_pangaea_paradigm.ui.components.global.TPPRouterLink;
+import com.the_pangaea_paradigm.ui.components.global.Header;
+import com.the_pangaea_paradigm.ui.components.landingpage.Description;
+import com.the_pangaea_paradigm.ui.components.landingpage.Footer;
+import com.the_pangaea_paradigm.ui.components.landingpage.Hero;
+import com.the_pangaea_paradigm.ui.components.landingpage.Usage;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
@@ -14,10 +17,19 @@ import com.vaadin.flow.router.Route;
 public class LandingPage extends VerticalLayout {
 
     public LandingPage() {
-        Component button = new TPPButton();
-        Component routerLink = new TPPRouterLink("Test", ProjectPage.class);
-        //button.addClickListener(e -> button.getUI().ifPresent(ui -> ui.navigate("some")));
-        add(routerLink);
-        add(button);
+        style();
+
+        final Component header = new Header();
+        final Component hero = new Hero();
+        final Component description = new Description();
+        final Component usage = new Usage();
+        final Component footer = new Footer();
+
+        add(header, hero, description, usage, footer);
+    }
+
+    private void style() {
+        setMargin(false);
+        setPadding(false);
     }
 }
