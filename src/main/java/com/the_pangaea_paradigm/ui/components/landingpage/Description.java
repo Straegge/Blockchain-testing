@@ -9,7 +9,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 /**
- * The description of the landing page.
+ * The application description of the landing page.
  */
 public final class Description extends HorizontalLayout implements StyledComponent {
 
@@ -26,6 +26,7 @@ public final class Description extends HorizontalLayout implements StyledCompone
     }
 
     private HtmlComponent descriptionTitle() {
+        //TODO: Write description title
         HtmlComponent descriptionTitle = new H2(
                 "Description Title"
         );
@@ -34,7 +35,7 @@ public final class Description extends HorizontalLayout implements StyledCompone
     }
 
     private HtmlComponent descriptionContent() {
-        //TODO: Write description
+        //TODO: Write description content
         HtmlComponent descriptionContent = new Paragraph(
                 "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
                         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
@@ -45,11 +46,11 @@ public final class Description extends HorizontalLayout implements StyledCompone
 
     @Override
     public void style() {
-        getStyle().set("margin", "0");
         setHeight("700px");
         setWidthFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultVerticalComponentAlignment(Alignment.CENTER);
+        getStyle().set("margin", "0");
         getStyle().set("background-color", Colors.DEFAULT_LANDING_PAGE_DESCRIPTION_COLOR.toString());
     }
 }
