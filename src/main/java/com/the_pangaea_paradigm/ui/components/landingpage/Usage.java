@@ -50,7 +50,8 @@ public final class Usage extends HorizontalLayout implements StyledComponent {
         setWidthFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultVerticalComponentAlignment(Alignment.CENTER);
-        getStyle().set("margin", "0");
-        getStyle().set("background-color", Colors.DEFAULT_LANDING_PAGE_USAGE_COLOR.toString());
+        getStyle()
+                .set("margin", "0")
+                .set("background-color", Colors.DEFAULT_LANDING_PAGE_USAGE_COLOR.toString());
     }
 }

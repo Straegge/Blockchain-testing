@@ -12,7 +12,6 @@ import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.dom.Style;
 
 /**
  * The hero banner of the landing page.
@@ -48,8 +47,9 @@ public final class Hero extends VerticalLayout implements StyledComponent {
         HtmlComponent delimiter = new Hr();
         delimiter.setWidth("100px");
         delimiter.setHeight("3px");
-        delimiter.getStyle().set("margin", "0 auto 0.2em auto");
-        delimiter.getStyle().set("background", "white");
+        delimiter.getStyle()
+                .set("margin", "0 auto 0.2em auto")
+                .set("background", "white");
         add(delimiter);
     }
 
@@ -68,10 +68,10 @@ public final class Hero extends VerticalLayout implements StyledComponent {
 
     private void styleHeroText(HtmlComponent component) {
         component.setWidth("50%");
-        Style style = component.getStyle();
-        style.set("margin", "0.7em 0");
-        style.set("text-align", "center");
-        style.set("color", "white");
+        component.getStyle()
+                .set("margin", "0.7em 0")
+                .set("text-align", "center")
+                .set("color", "white");
     }
 
     @Override
@@ -80,7 +80,8 @@ public final class Hero extends VerticalLayout implements StyledComponent {
         setWidthFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        getStyle().set("margin-top", "70px");
-        getStyle().set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
+        getStyle()
+                .set("margin-top", "70px")
+                .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
     }
 }

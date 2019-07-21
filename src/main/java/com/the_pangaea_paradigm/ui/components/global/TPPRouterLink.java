@@ -4,7 +4,6 @@ import com.the_pangaea_paradigm.utilities.Colors;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
-import com.vaadin.flow.dom.Style;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.VaadinService;
 
@@ -15,6 +14,7 @@ public final class TPPRouterLink extends Composite<RouterLink> implements Styled
 
     public TPPRouterLink(String text, Class<? extends Component> navigationTarget) {
         style();
+        setAttributes();
 
         RouterLink parent = getContent();
         parent.setText(text);
@@ -23,26 +23,26 @@ public final class TPPRouterLink extends Composite<RouterLink> implements Styled
 
     @Override
     public void style() {
-        Style style = getContent().getStyle();
-        style.set("cursor", "default");
-        style.set("padding", "0.5em 1em");
-        style.set("border-width", "1px");
-        style.set("border-style", "solid");
-        style.set("border-color", Colors.DEFAULT_BORDER_COLOR.toString());
-        style.set("color", Colors.DEFAULT_TEXT_COLOR.toString());
-        style.set("background-color", Colors.DEFAULT_BUTTON_COLOR.toString());
-        setHoverStyle();
+        getContent().getStyle()
+                .set("cursor", "default")
+                .set("padding", "0.5em 1em")
+                .set("border-width", "1px")
+                .set("border-style", "solid")
+                .set("border-color", Colors.DEFAULT_BORDER_COLOR.toString())
+                .set("color", Colors.DEFAULT_TEXT_COLOR.toString())
+                .set("background-color", Colors.DEFAULT_BUTTON_COLOR.toString());
     }
 
-    private void setHoverStyle() {
-        getContent().getElement().setAttribute("onMouseOver",
-                "this.style.backgroundColor='" + Colors.DEFAULT_HOVER_COLOR.toString() + "';" +
-                        "this.style.textDecoration='none';" +
-                        "this.style.transitionDuration='0.4s'"
-        );
-        getContent().getElement().setAttribute("onMouseOut",
-                "this.style.backgroundColor='" + Colors.DEFAULT_BUTTON_COLOR.toString() + "';" +
-                        "this.style.transitionDuration='0.4s'"
-        );
+    private void setAttributes() {
+        getElement()
+                .setAttribute("onMouseOver",
+                        "this.style.backgroundColor='" + Colors.DEFAULT_HOVER_COLOR.toString() + "';" +
+                                "this.style.textDecoration='none';" +
+                                "this.style.transitionDuration='0.4s'"
+                )
+                .setAttribute("onMouseOut",
+                        "this.style.backgroundColor='" + Colors.DEFAULT_BUTTON_COLOR.toString() + "';" +
+                                "this.style.transitionDuration='0.4s'"
+                );
     }
 }

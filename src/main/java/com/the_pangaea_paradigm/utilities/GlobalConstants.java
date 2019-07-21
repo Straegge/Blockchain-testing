@@ -1,5 +1,8 @@
 package com.the_pangaea_paradigm.utilities;
 
+/**
+ * Enum for global constants used in the application.
+ */
 public enum GlobalConstants {
     LOGO("frontend/images/Logo.png"),
     LOGO_WITH_NAME("frontend/images/LogoWithName.png"),

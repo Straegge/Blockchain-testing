@@ -1,8 +1,8 @@
 package com.the_pangaea_paradigm.ui;
 
+import com.the_pangaea_paradigm.ui.components.global.Footer;
 import com.the_pangaea_paradigm.ui.components.global.Header;
 import com.the_pangaea_paradigm.ui.components.landingpage.Description;
-import com.the_pangaea_paradigm.ui.components.global.Footer;
 import com.the_pangaea_paradigm.ui.components.landingpage.Hero;
 import com.the_pangaea_paradigm.ui.components.landingpage.Usage;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
@@ -31,8 +31,10 @@ public final class LandingPage extends VerticalLayout implements StyledComponent
 
     @Override
     public void style() {
-        getStyle().set("margin", "0");
-        getStyle().set("padding", "0");
+        getStyle()
+                .set("margin", "0")
+                .set("padding", "0");
+
         getElement().executeJavaScript("document.body.style.overflowX = 'hidden'");
     }
 }

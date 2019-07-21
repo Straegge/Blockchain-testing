@@ -1,5 +1,8 @@
 package com.the_pangaea_paradigm.utilities;
 
+/**
+ * Enum for colors used in the application.
+ */
 public enum Colors {
     DEFAULT_TEXT_COLOR("#99d6ff"),
     DEFAULT_BORDER_COLOR("#99d6ff"),

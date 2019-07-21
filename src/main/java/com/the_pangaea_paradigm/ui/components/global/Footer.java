@@ -37,7 +37,8 @@ public final class Footer extends VerticalLayout implements StyledComponent {
         setWidthFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        getStyle().set("margin", "0");
-        getStyle().set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
+        getStyle()
+                .set("margin", "0")
+                .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
     }
 }
