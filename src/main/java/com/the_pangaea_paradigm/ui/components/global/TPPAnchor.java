@@ -2,35 +2,27 @@ package com.the_pangaea_paradigm.ui.components.global;
 
 import com.the_pangaea_paradigm.utilities.Colors;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
-import com.vaadin.flow.component.ClickEvent;
-import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.Composite;
-import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.dom.Style;
 
 /**
- * Custom Button component used throughout the application.
+ * Custom Anchor component used throughout the application for external routing.
  */
-public final class TPPButton extends Composite<Button> implements StyledComponent {
+public class TPPAnchor extends Composite<Anchor> implements StyledComponent {
 
-    public TPPButton(String text) {
+    TPPAnchor(String href, String text) {
         style();
 
-        Button parent = getContent();
+        Anchor parent = getContent();
+        parent.setHref(href);
         parent.setText(text);
-    }
-
-    public TPPButton(String text, ComponentEventListener<ClickEvent<Button>> clickEventListener) {
-        style();
-
-        Button parent = getContent();
-        parent.setText(text);
-        parent.addClickListener(clickEventListener);
     }
 
     @Override
     public void style() {
         Style style = getContent().getStyle();
+        getElement().setAttribute("target", "_blank");
         style.set("cursor", "default");
         style.set("padding", "0.5em 1em");
         style.set("border-width", "1px");
