@@ -9,7 +9,7 @@ import com.vaadin.flow.dom.Style;
 /**
  * Custom Anchor component used throughout the application for external routing.
  */
-public class TPPAnchor extends Composite<Anchor> implements StyledComponent {
+public final class TPPAnchor extends Composite<Anchor> implements StyledComponent {
 
     TPPAnchor(String href, String text) {
         style();
