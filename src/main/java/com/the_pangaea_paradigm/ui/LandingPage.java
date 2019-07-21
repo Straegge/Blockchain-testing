@@ -31,7 +31,7 @@ public class LandingPage extends VerticalLayout implements StyledComponent {
 
     @Override
     public void style() {
-        setMargin(false);
-        setPadding(false);
+        getStyle().set("margin", "0");
+        getStyle().set("padding", "0");
     }
 }

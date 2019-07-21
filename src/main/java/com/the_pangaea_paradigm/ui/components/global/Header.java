@@ -15,12 +15,12 @@ public final class Header extends HorizontalLayout implements StyledComponent {
     public Header() {
         style();
 
-        addLogo();
+        addHeaderLogo();
     }
 
-    private void addLogo() {
+    private void addHeaderLogo() {
         //TODO: Fix Logo (make smaller)
-        Image logo = new Image("frontend/images/Logo.png", "TPP Logo");
+        Image logo = new Image("frontend/images/Logo.png", "TPP Header Logo");
         logo.addClickListener(e -> logo.getUI().ifPresent(ui -> ui.navigate(LandingPage.class)));
         logo.setHeightFull();
         add(logo);
@@ -30,9 +30,10 @@ public final class Header extends HorizontalLayout implements StyledComponent {
     public void style() {
         setHeight("70px");
         setWidthFull();
-        setMargin(false);
         setPadding(true);
         setAlignItems(FlexComponent.Alignment.START);
+        getStyle().set("position", "fixed");
+        getStyle().set("margin", "0");
         getStyle().set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
     }
 }

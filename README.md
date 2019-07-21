@@ -1,6 +1,6 @@
 The Pangaea Paradigm
 ==============
-"**Find likeminded people. Organize yourself. Change the world.**"
+"**Find like-minded people. Organize yourselves. Change the world.**"
 
 *A paradigm is a cognitive framework of specific assumptions, ways of thinking and methodologies. Pangaea was the supercontinent consisting of all of Earth's landmasses. The Pangaea Paradigm aims to create a figurative supercontinent of humanity, uniting all people in the common goal of moving forward, through the application of an action-oriented mindset, rational decision-making and technology.*
 
