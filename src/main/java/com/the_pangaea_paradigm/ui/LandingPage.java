@@ -33,5 +33,6 @@ public class LandingPage extends VerticalLayout implements StyledComponent {
     public void style() {
         getStyle().set("margin", "0");
         getStyle().set("padding", "0");
+        getElement().executeJavaScript("document.body.style.overflowX = 'hidden'");
     }
 }
