@@ -11,7 +11,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 /**
  * The usage description of the landing page.
  */
-public class Usage extends HorizontalLayout implements StyledComponent {
+public final class Usage extends HorizontalLayout implements StyledComponent {
 
     public Usage() {
         style();

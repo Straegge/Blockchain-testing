@@ -2,6 +2,7 @@ package com.the_pangaea_paradigm.ui.components.global;
 
 import com.the_pangaea_paradigm.ui.LandingPage;
 import com.the_pangaea_paradigm.utilities.Colors;
+import com.the_pangaea_paradigm.utilities.GlobalConstants;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
@@ -19,8 +20,8 @@ public final class Header extends HorizontalLayout implements StyledComponent {
     }
 
     private void addHeaderLogo() {
-        //TODO: Fix Logo (make smaller)
-        Image logo = new Image("frontend/images/Logo.png", "TPP Header Logo");
+        //TODO: Fix Logo (make more visible)
+        Image logo = new Image(GlobalConstants.LOGO_WITH_NAME.toString(), "TPP Header Logo");
         logo.addClickListener(e -> logo.getUI().ifPresent(ui -> ui.navigate(LandingPage.class)));
         logo.setHeightFull();
         add(logo);

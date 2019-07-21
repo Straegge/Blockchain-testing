@@ -3,6 +3,7 @@ package com.the_pangaea_paradigm.ui.components.landingpage;
 import com.the_pangaea_paradigm.ui.ProjectPage;
 import com.the_pangaea_paradigm.ui.components.global.TPPRouterLink;
 import com.the_pangaea_paradigm.utilities.Colors;
+import com.the_pangaea_paradigm.utilities.GlobalConstants;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H1;
@@ -29,7 +30,7 @@ public final class Hero extends VerticalLayout implements StyledComponent {
     }
 
     private void addLogo() {
-        HtmlComponent logo = new Image("frontend/images/Logo_Simple.png", "TPP Logo");
+        HtmlComponent logo = new Image(GlobalConstants.LOGO.toString(), "TPP Logo");
         logo.getStyle().set("height", "170px");
         add(logo);
     }

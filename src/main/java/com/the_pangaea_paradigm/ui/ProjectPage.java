@@ -6,7 +6,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("projects")
-public class ProjectPage extends VerticalLayout {
+public final class ProjectPage extends VerticalLayout {
     public ProjectPage() {
         style();
 
