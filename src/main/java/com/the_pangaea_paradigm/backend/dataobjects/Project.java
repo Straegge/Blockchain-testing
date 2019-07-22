@@ -1,10 +1,9 @@
-package com.the_pangaea_paradigm.utilities;
+package com.the_pangaea_paradigm.backend.dataobjects;
 
 /**
  * The entity class for a Project.
- * Used for adding projects to and rendering projects from IFPS.
  */
-public final class Project {
+public class Project {
     private String name;
     private String description;
 

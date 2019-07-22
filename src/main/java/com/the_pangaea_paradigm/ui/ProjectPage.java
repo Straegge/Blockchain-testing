@@ -3,7 +3,7 @@ package com.the_pangaea_paradigm.ui;
 import com.the_pangaea_paradigm.ui.components.global.Footer;
 import com.the_pangaea_paradigm.ui.components.global.Header;
 import com.the_pangaea_paradigm.ui.components.projectpage.ProjectActionContainer;
-import com.the_pangaea_paradigm.ui.components.projectpage.ProjectGrid;
+import com.the_pangaea_paradigm.ui.components.projectpage.ProjectGridContainer;
 import com.the_pangaea_paradigm.utilities.Routes;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
@@ -20,7 +20,7 @@ public final class ProjectPage extends VerticalLayout implements StyledComponent
 
         final Component header = new Header();
         final Component projectActionContainer = new ProjectActionContainer();
-        final Component projectGrid = new ProjectGrid();
+        final Component projectGrid = new ProjectGridContainer();
         final Component footer = new Footer();
 
         add(header, projectActionContainer, projectGrid, footer);
