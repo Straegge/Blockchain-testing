@@ -6,6 +6,9 @@ import com.vaadin.flow.component.grid.Grid;
 
 import java.util.List;
 
+/**
+ *
+ */
 public class ProjectGrid extends Composite<Grid<Project>> implements StyledComponent {
 
     public ProjectGrid() {
