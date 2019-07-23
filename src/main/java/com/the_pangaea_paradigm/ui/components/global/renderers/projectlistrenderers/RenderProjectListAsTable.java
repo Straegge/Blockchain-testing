@@ -5,7 +5,7 @@ import com.vaadin.flow.component.Component;
 
 /**
  * Concrete Strategy.
- *
+ * <p>
  * Renders the <tt>ProjectList</tt> as a Table with rows and columns.
  */
 public class RenderProjectListAsTable implements ProjectListRenderer {

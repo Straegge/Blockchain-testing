@@ -1,18 +1,21 @@
 package com.the_pangaea_paradigm.backend.dataobjects;
 
-import java.util.List;
+import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers.ProjectListRenderer;
+import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers.RenderProjectListAsTable;
+import com.vaadin.flow.component.Component;
 
 /**
- * Represents a list of projects, typically used to display to the user.
+ * Represents an abstract list of Projects.
  */
-public class ProjectList {
-    private List<Project> projectList;
+public abstract class ProjectList {
 
-    public ProjectList(List<Project> projectList) {
-        this.projectList = projectList;
+    private ProjectListRenderer projectListRenderer = new RenderProjectListAsTable();
+
+    public void setProjectListRenderer(ProjectListRenderer projectListRenderer) {
+        this.projectListRenderer = projectListRenderer;
     }
 
-    public List<Project> getProjectList() {
-        return projectList;
+    public Class<? extends Component> render(ProjectList projectList) {
+        return projectListRenderer.render(projectList);
     }
 }
