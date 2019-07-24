@@ -10,7 +10,8 @@ import java.util.Optional;
 /**
  * Data Access Object Interface for executing CRUD operations on Projects.
  *
- * Single Responsibility Principle is generally thought to be achieved by object-specific
+ * Responsible for executing 4 different types of functionality, but Single
+ * Responsibility Principle is generally agreed to be achieved by object-specific
  * DAO classes since their only responsibility is persistence of that data object.
  *
  * Keeps the Project model decoupled from the persistence layer, and as such all data

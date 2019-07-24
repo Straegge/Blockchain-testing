@@ -1,14 +1,21 @@
 package com.the_pangaea_paradigm.backend.dataobjects;
 
+import java.io.Serializable;
+
 /**
  * The entity class for a Project.
  */
-public class Project {
+public class Project implements Serializable {
     private String name;
     private String description;
 
     public Project() {
 
+    }
+
+    public Project(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
     @Override

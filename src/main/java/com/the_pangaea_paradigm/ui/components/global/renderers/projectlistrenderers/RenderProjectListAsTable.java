@@ -15,6 +15,6 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
     public Grid<Project> render(ProjectList projectList) {
         //TODO Implement Renderer
         System.out.println("Implement me!");
-        return null;
+        return new Grid<>();
     }
 }

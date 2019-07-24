@@ -7,15 +7,15 @@ import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrender
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.vaadin.flow.component.Tag;
 
 /**
  *
  */
+@Tag("div")
 public class ProjectListContainer extends Component implements StyledComponent, HasComponents {
 
-    @Autowired
-    private ProjectService projectService;
+    private ProjectService projectService = new ProjectService();
     private ProjectListRenderer projectListRenderer = new RenderProjectListAsTable();
 
     public ProjectListContainer() {
