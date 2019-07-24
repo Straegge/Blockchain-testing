@@ -11,7 +11,7 @@ import com.vaadin.flow.component.Component;
 public class RenderProjectListAsTable implements ProjectListRenderer {
 
     @Override
-    public Class<? extends Component> render(ProjectList projectList) {
+    public Component render(ProjectList projectList) {
         //TODO Implement Renderer
         System.out.println("Implement me!");
         return null;

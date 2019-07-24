@@ -11,5 +11,5 @@ import com.vaadin.flow.component.Component;
  */
 @FunctionalInterface
 public interface ProjectListRenderer {
-    Class<? extends Component> render(ProjectList projectList);
+    Component render(ProjectList projectList);
 }
