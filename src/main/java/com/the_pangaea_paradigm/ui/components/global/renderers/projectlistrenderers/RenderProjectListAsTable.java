@@ -1,7 +1,8 @@
 package com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers;
 
+import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
-import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.grid.Grid;
 
 /**
  * Concrete Strategy.
@@ -11,7 +12,7 @@ import com.vaadin.flow.component.Component;
 public class RenderProjectListAsTable implements ProjectListRenderer {
 
     @Override
-    public Component render(ProjectList projectList) {
+    public Grid<Project> render(ProjectList projectList) {
         //TODO Implement Renderer
         System.out.println("Implement me!");
         return null;

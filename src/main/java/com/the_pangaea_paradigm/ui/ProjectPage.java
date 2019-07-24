@@ -21,7 +21,7 @@ public final class ProjectPage extends VerticalLayout implements StyledComponent
 
         final Component header = new Header();
         final Component projectActionContainer = new ProjectActionContainer();
-        final Component projectListContainer = new ProjectListContainer();
+        Component projectListContainer = new ProjectListContainer();
         final Component footer = new Footer();
 
         add(header, projectActionContainer, projectListContainer, footer);
