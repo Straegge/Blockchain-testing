@@ -5,6 +5,7 @@ import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.utilities.GlobalConstants;
 import io.ipfs.api.IPFS;
 import io.ipfs.multihash.Multihash;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.Optional;
  * Concrete Data Access Object for executing CRUD operations on Projects
  * in communication with IPFS as data persistence layer.
  */
+@Repository
 public class IPFSProjectDao implements ProjectDao {
 
     IPFS ipfs = new IPFS(GlobalConstants.INFURA_IPFS_GATEWAY_MULTIADDRESS.toString());
