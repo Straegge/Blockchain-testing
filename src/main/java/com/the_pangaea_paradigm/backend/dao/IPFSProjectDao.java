@@ -1,14 +1,9 @@
 package com.the_pangaea_paradigm.backend.dao;
 
-import com.google.gson.Gson;
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.backend.ipfs.IPFSStarter;
-import com.the_pangaea_paradigm.utilities.GlobalConstants;
-import io.ipfs.api.IPFS;
-import io.ipfs.multihash.Multihash;
 import org.springframework.stereotype.Repository;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

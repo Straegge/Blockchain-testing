@@ -1,6 +1,5 @@
 package com.the_pangaea_paradigm.services;
 
-import com.the_pangaea_paradigm.backend.dao.IPFSProjectDao;
 import com.the_pangaea_paradigm.backend.dao.ProjectDao;
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
