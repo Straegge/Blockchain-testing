@@ -29,7 +29,7 @@ public class IPFSProjectDao implements ProjectDao {
 
     @Override
     public List<Project> getAll() {
-        //IPFSStarter ipfsStarter = new IPFSStarter();
+        IPFSStarter ipfsStarter = new IPFSStarter();
         List<Project> projectList = new ArrayList<>();
         /*Gson gson = new Gson();
         Multihash filePointerToProjectListFile = Multihash.fromBase58(GlobalConstants.PROJECT_LIST_FILE_IPFS_HASH.toString());

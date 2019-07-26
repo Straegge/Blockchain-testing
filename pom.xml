@@ -53,6 +53,11 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+		<repository>
+			<id>consensys-kauri</id>
+			<name>consensys-kauri</name>
+			<url>https://consensys.bintray.com/kauri/</url>
+		</repository>
 	</repositories>
 
 	<dependencyManagement>
@@ -63,11 +68,6 @@
 				<version>${vaadin.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>net.consensys.mahuta</groupId>
-				<artifactId>mahuta-springdata</artifactId>
-				<version>${mahuta.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -106,6 +106,11 @@
             <artifactId>gson</artifactId>
             <version>2.8.1</version>
         </dependency>
+		<dependency>
+			<groupId>net.consensys.mahuta</groupId>
+			<artifactId>mahuta-springdata</artifactId>
+			<version>${mahuta.version}</version>
+		</dependency>
     </dependencies>
 
 	<build>
@@ -120,6 +125,16 @@
                 <version>0.3.7</version>
                 <configuration>
                     <soliditySourceFiles/>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <excludes>
+                        <exclude>org.apache.commons:commons-collections4</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
 			<plugin>

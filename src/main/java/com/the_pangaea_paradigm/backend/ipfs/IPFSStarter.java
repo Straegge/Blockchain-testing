@@ -24,7 +24,9 @@ public class IPFSStarter {
         /*
             HASH OF DIRECTORY: QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
          */
-        IPFS ipfs = new IPFS("/dnsaddr/ipfs.infura.io/tcp/5001/https");
+        //IPFS ipfs = new IPFS("/dnsaddr/ipfs.infura.io/tcp/5001/https");
+        IPFS ipfs = new IPFS("/ip4/127.0.0.1/tcp/5001");
+        //IPFS ipfs = new IPFS("/dnsaddr/blockchaintestingenv.k9p4yasfix.eu-central-1.elasticbeanstalk.com/tcp/5001/http");
 
         System.out.println("IPFS Protocol: " + ipfs.protocol);
         System.out.println("IPFS Host: " + ipfs.host);
@@ -41,20 +43,12 @@ public class IPFSStarter {
         MerkleNode addResultProject;
         MerkleNode addResult;
         String ipfsHash = null;
-        try {
-            //ProjectListMerkleDag projectListMerkleDag = gson.fromJson(new String(ipfs.dag.get(new Cid(filePointer))), ProjectListMerkleDag.class);
-            //System.out.println("Data: " + projectListMerkleDag.getData());
-            //System.out.println("Links: " + projectListMerkleDag.getLinks());
+        //ProjectListMerkleDag projectListMerkleDag = gson.fromJson(new String(ipfs.dag.get(new Cid(filePointer))), ProjectListMerkleDag.class);
+        //System.out.println("Data: " + projectListMerkleDag.getData());
+        //System.out.println("Links: " + projectListMerkleDag.getLinks());
 
-            //ipfs method not allowed...
-            //addResult = ipfs.object.patch(filePointer, "add-link", Optional.empty(), Optional.of("Test 1"), Optional.of(addResultProject.hash));
-            addResultProject = ipfs.add(byteArrayWrapper).get(0);
-            System.out.println("Hash of added ProjectMerkleDag: " + addResultProject.hash);
-            boolean addedToLinks = ipfs.object.get(filePointer).links.add(addResultProject);
-            //System.out.println("Hash of patched ProjectListMerkleDag: " + addResult.hash);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //addResult = ipfs.object.patch(filePointer, "add-link", Optional.empty(), Optional.of("Test 1"), Optional.of(addResultProject.hash));
+        //addResultProject = ipfs.add(byteArrayWrapper).get(0);
 
         /*
             ADD DIRECTORY
