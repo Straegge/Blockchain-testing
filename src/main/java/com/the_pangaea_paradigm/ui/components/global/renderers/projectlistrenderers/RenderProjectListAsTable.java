@@ -14,7 +14,7 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
     @Override
     public Grid<Project> render(ProjectList projectList) {
         //TODO Implement Renderer
-        System.out.println("Implement me!");
+
         return new Grid<>();
     }
 }

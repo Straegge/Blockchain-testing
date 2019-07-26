@@ -10,6 +10,7 @@ import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * The project page of the application.
@@ -17,15 +18,14 @@ import com.vaadin.flow.router.Route;
 @Route(Routes.PROJECT_PAGE_ROUTE)
 public final class ProjectPage extends VerticalLayout implements StyledComponent {
 
-    public ProjectPage() {
+    public ProjectPage(@Autowired ProjectListContainer projectListContainer) {
         style();
 
         final Component header = new Header();
         final Component projectActionContainer = new ProjectActionContainer();
-        Component projectListContainer = new ProjectListContainer();
         final Component footer = new Footer();
 
-        add(header, projectActionContainer, projectListContainer, footer);
+        add(header, projectActionContainer, projectListContainer.create(), footer);
     }
 
     @Override

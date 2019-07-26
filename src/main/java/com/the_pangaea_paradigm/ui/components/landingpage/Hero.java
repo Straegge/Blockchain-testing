@@ -30,7 +30,7 @@ public final class Hero extends VerticalLayout implements StyledComponent {
     }
 
     private void addLogo() {
-        HtmlComponent logo = new Image(GlobalConstants.LOGO.toString(), "TPP Logo");
+        HtmlComponent logo = new Image(GlobalConstants.LOGO, "TPP Logo");
         logo.getStyle().set("height", "170px");
         add(logo);
     }

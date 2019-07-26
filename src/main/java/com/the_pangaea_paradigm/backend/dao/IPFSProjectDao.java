@@ -2,6 +2,7 @@ package com.the_pangaea_paradigm.backend.dao;
 
 import com.google.gson.Gson;
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.backend.ipfs.IPFSStarter;
 import com.the_pangaea_paradigm.utilities.GlobalConstants;
 import io.ipfs.api.IPFS;
 import io.ipfs.multihash.Multihash;
@@ -19,7 +20,7 @@ import java.util.Optional;
 @Repository
 public class IPFSProjectDao implements ProjectDao {
 
-    IPFS ipfs = new IPFS(GlobalConstants.INFURA_IPFS_GATEWAY_MULTIADDRESS.toString());
+    //private IPFS ipfs = new IPFS(GlobalConstants.INFURA_IPFS_GATEWAY_MULTIADDRESS.toString());
 
     @Override
     public Optional<Project> get(long id) {
@@ -28,8 +29,9 @@ public class IPFSProjectDao implements ProjectDao {
 
     @Override
     public List<Project> getAll() {
+        //IPFSStarter ipfsStarter = new IPFSStarter();
         List<Project> projectList = new ArrayList<>();
-        Gson gson = new Gson();
+        /*Gson gson = new Gson();
         Multihash filePointerToProjectListFile = Multihash.fromBase58(GlobalConstants.PROJECT_LIST_FILE_IPFS_HASH.toString());
 
         String fileContentString = null;
@@ -39,7 +41,7 @@ public class IPFSProjectDao implements ProjectDao {
             e.printStackTrace();
         }
 
-        Project project = gson.fromJson(fileContentString, Project.class);
+        Project project = gson.fromJson(fileContentString, Project.class);*/
         return projectList;
     }
 

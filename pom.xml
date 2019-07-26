@@ -20,6 +20,7 @@
 
 		<!-- Dependencies -->
 		<vaadin.version>13.0.11</vaadin.version>
+		<mahuta.version>0.3.8</mahuta.version>
 		<vaadin.widgetset.mode>local</vaadin.widgetset.mode>
 	</properties>
 
@@ -62,6 +63,11 @@
 				<version>${vaadin.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>net.consensys.mahuta</groupId>
+				<artifactId>mahuta-springdata</artifactId>
+				<version>${mahuta.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
