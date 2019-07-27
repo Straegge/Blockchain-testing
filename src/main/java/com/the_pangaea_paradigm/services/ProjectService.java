@@ -1,12 +1,9 @@
 package com.the_pangaea_paradigm.services;
 
 import com.the_pangaea_paradigm.backend.dao.ProjectDao;
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * Service class for Projects.
@@ -23,8 +20,7 @@ public class ProjectService implements ProjectServiceInterface {
 
     @Override
     public ProjectList fetchAllProjects() {
-        List<Project> projectList = projectDao.getAll();
 
-        return new ProjectList(projectList);
+        return projectDao.getAll();
     }
 }

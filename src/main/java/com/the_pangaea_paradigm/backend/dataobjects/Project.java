@@ -3,7 +3,7 @@ package com.the_pangaea_paradigm.backend.dataobjects;
 import java.io.Serializable;
 
 /**
- * The entity class for a Project.
+ * A Project entity.
  */
 public class Project implements Serializable {
     private String name;

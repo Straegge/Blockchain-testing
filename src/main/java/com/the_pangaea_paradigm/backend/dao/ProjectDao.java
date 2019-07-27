@@ -1,8 +1,8 @@
 package com.the_pangaea_paradigm.backend.dao;
 
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
 
-import java.util.List;
 import java.util.Optional;
 
 //TODO: Implement Abstract Factory Pattern for different data persistence strategies
@@ -21,7 +21,7 @@ public interface ProjectDao {
 
     Optional<Project> get(long id);
 
-    List<Project> getAll();
+    ProjectList getAll();
 
     void save(Project project);
 
