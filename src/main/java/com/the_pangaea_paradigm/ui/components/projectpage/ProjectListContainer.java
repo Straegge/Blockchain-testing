@@ -8,13 +8,18 @@ import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
+ * Container for the rendered ProjectList. Is itself a Spring Bean so it can be autowired into the ProjectPage.
  *
+ * UIScoped so the Container is renewed when the ProjectPage is reloaded.
  */
 @Tag("div")
-@org.springframework.stereotype.Component
+@SpringComponent
+@UIScope
 public class ProjectListContainer extends Component implements StyledComponent, HasComponents {
 
     @Autowired

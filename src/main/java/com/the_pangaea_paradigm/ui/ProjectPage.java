@@ -2,7 +2,6 @@ package com.the_pangaea_paradigm.ui;
 
 import com.the_pangaea_paradigm.ui.components.global.Footer;
 import com.the_pangaea_paradigm.ui.components.global.Header;
-import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers.RenderProjectListAsTable;
 import com.the_pangaea_paradigm.ui.components.projectpage.ProjectActionContainer;
 import com.the_pangaea_paradigm.ui.components.projectpage.ProjectListContainer;
 import com.the_pangaea_paradigm.utilities.Routes;
