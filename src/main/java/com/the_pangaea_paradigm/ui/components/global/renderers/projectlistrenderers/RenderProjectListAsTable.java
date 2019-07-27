@@ -15,6 +15,10 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
     public Grid<Project> render(ProjectList projectList) {
         //TODO Implement Renderer
 
-        return new Grid<>();
+        Grid<Project> grid = new Grid<>(Project.class);
+        grid.setColumns("name", "description");
+        grid.setItems(projectList.getProjects());
+
+        return grid;
     }
 }
