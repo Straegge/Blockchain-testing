@@ -1,21 +1,29 @@
 package com.the_pangaea_paradigm.backend.dataobjects;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * A Project entity.
  */
-public class Project implements Serializable {
-    private String name;
+public final class Project implements Serializable {
+
+    private String projectName;
+    private String initiatorName;
     private String description;
+    private List<String> requiredSkillSets;
+    private String ethereumAddress;
 
     public Project() {
 
     }
 
-    public Project(String name, String description) {
-        this.name = name;
+    public Project(String projectName, String initiatorName, String description, List<String> requiredSkillSets, String ethereumAddress) {
+        this.projectName = projectName;
+        this.initiatorName = initiatorName;
         this.description = description;
+        this.requiredSkillSets = requiredSkillSets;
+        this.ethereumAddress = ethereumAddress;
     }
 
     @Override
@@ -23,19 +31,23 @@ public class Project implements Serializable {
         return "";
     }
 
-    public String getName() {
-        return name;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getInitiatorName() {
+        return initiatorName;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public List<String> getRequiredSkillSets() {
+        return requiredSkillSets;
+    }
+
+    public String getEthereumAddress() {
+        return ethereumAddress;
     }
 }
