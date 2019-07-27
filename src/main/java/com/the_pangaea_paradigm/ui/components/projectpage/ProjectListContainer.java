@@ -6,6 +6,8 @@ import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrender
 import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers.RenderProjectListAsTable;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.DetachEvent;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.spring.annotation.SpringComponent;
@@ -14,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Container for the rendered ProjectList. Is itself a Spring Bean so it can be autowired into the ProjectPage.
- *
+ * <p>
  * UIScoped so the Container is renewed when the ProjectPage is reloaded.
  */
 @Tag("div")
@@ -37,9 +39,10 @@ public class ProjectListContainer extends Component implements StyledComponent, 
 
     private void render(ProjectList projectList) {
         Component renderedProjectList = projectListRenderer.render(projectList);
+        addDetachListener((ComponentEventListener<DetachEvent>) event -> remove(renderedProjectList));
         add(renderedProjectList);
     }
-
+    
     public void setProjectListRenderer(ProjectListRenderer projectListRenderer) {
         this.projectListRenderer = projectListRenderer;
     }

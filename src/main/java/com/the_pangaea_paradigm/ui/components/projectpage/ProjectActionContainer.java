@@ -16,7 +16,7 @@ public class ProjectActionContainer extends HorizontalLayout implements StyledCo
 
     private void addCreateProjectButton() {
         //TODO: Add ComponentEventListener to open ProjectCreationView
-        Component createProjectButton = new TPPButton("", ClickEvent::getClickCount);
+        Component createProjectButton = new TPPButton("Create Project", ClickEvent::getClickCount);
         add(createProjectButton);
     }
 
