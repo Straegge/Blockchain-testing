@@ -10,7 +10,8 @@ public final class Project implements Serializable {
 
     private String projectName;
     private String initiatorName;
-    private String description;
+    private String shortDescription;
+    private String longDescription;
     private List<String> requiredSkillSets;
     private String ethereumAddress;
 
@@ -18,10 +19,13 @@ public final class Project implements Serializable {
 
     }
 
-    public Project(String projectName, String initiatorName, String description, List<String> requiredSkillSets, String ethereumAddress) {
+    public Project(String projectName, String initiatorName,
+                   String shortDescription, String longDescription,
+                   List<String> requiredSkillSets, String ethereumAddress) {
         this.projectName = projectName;
         this.initiatorName = initiatorName;
-        this.description = description;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
         this.requiredSkillSets = requiredSkillSets;
         this.ethereumAddress = ethereumAddress;
     }
@@ -39,8 +43,12 @@ public final class Project implements Serializable {
         return initiatorName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public String getLongDescription() {
+        return longDescription;
     }
 
     public List<String> getRequiredSkillSets() {

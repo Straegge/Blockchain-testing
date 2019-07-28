@@ -17,7 +17,7 @@ public class IPFSStarter {
         IPFS ipfs = new IPFS("/dnsaddr/ipfs.infura.io/tcp/5001/https");
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        Project projectToAdd = new Project("Best Project Name 5", "Best Project Description 5");
+        Project projectToAdd = new Project();
 
         Multihash directoryMultihash;
         MerkleNode addResult;
