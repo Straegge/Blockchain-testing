@@ -1,7 +1,15 @@
 package com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers;
 
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.ui.components.global.TPPButton;
+import com.the_pangaea_paradigm.ui.views.ProjectApplicationView;
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.HtmlComponent;
+import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.ThemableLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 /**
@@ -12,20 +20,145 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
  */
 public class RenderProjectAsTableItemDetails implements ProjectRenderer {
 
+    private Project project;
+
     @Override
     public VerticalLayout render(Project project) {
-        //TODO Implement Renderer
+        this.project = project;
+
         VerticalLayout projectDetailsLayout = new VerticalLayout();
-        HorizontalLayout projectNameAndInitiatorLayout = new HorizontalLayout();
-        HorizontalLayout descriptionLayout = new HorizontalLayout();
-        HorizontalLayout skillSetsAndAddressLayout = new HorizontalLayout();
-        HorizontalLayout applicationLayout = new HorizontalLayout();
+        projectDetailsLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.EVENLY);
+        projectDetailsLayout.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.STRETCH);
+        style(projectDetailsLayout, true);
+
+        HorizontalLayout projectAndInitiatorLayout = createProjectAndInitiatorLayout();
+
+        VerticalLayout descriptionLayout = createDescriptionLayout();
+
+        VerticalLayout skillSetsLayout = createSkillSetsLayout();
+
+        VerticalLayout addressLayout = createAddressLayout();
+
+        VerticalLayout applicationLayout = createApplicationLayout();
 
         projectDetailsLayout.add(
-                projectNameAndInitiatorLayout,
+                projectAndInitiatorLayout,
                 descriptionLayout,
-                skillSetsAndAddressLayout,
-                applicationLayout);
+                skillSetsLayout,
+                addressLayout,
+                applicationLayout
+        );
         return projectDetailsLayout;
+    }
+
+    private HorizontalLayout createProjectAndInitiatorLayout() {
+        HorizontalLayout projectAndInitiatorLayout = new HorizontalLayout();
+        projectAndInitiatorLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.EVENLY);
+        style(projectAndInitiatorLayout, true);
+
+        VerticalLayout projectLayout = new VerticalLayout();
+        style(projectLayout, false);
+
+        HtmlComponent projectKey = new H3(
+                "Project"
+        );
+        HtmlComponent projectValue = new Paragraph(
+                project.getProjectName()
+        );
+        projectLayout.add(projectKey);
+        projectLayout.add(projectValue);
+
+        VerticalLayout initiatorLayout = new VerticalLayout();
+        style(initiatorLayout, false);
+
+        HtmlComponent initiatorKey = new H3(
+                "Initiator"
+        );
+        HtmlComponent initiatorValue = new Paragraph(
+                project.getInitiatorName()
+        );
+        initiatorLayout.add(initiatorKey);
+        initiatorLayout.add(initiatorValue);
+
+        projectAndInitiatorLayout.add(
+                projectLayout,
+                initiatorLayout
+        );
+        return projectAndInitiatorLayout;
+    }
+
+    private VerticalLayout createDescriptionLayout() {
+        VerticalLayout descriptionLayout = new VerticalLayout();
+        style(descriptionLayout, true);
+
+        HtmlComponent descriptionKey = new H3(
+                "Description"
+        );
+        HtmlComponent descriptionValue = new Paragraph(
+                project.getLongDescription()
+        );
+
+        descriptionLayout.add(
+                descriptionKey,
+                descriptionValue
+        );
+        return descriptionLayout;
+    }
+
+    private VerticalLayout createSkillSetsLayout() {
+        VerticalLayout skillSetsLayout = new VerticalLayout();
+        style(skillSetsLayout, true);
+
+        HtmlComponent skillSetsKey = new H3(
+                "Skill Sets"
+        );
+        HtmlComponent skillSetsValue = new Paragraph(
+                String.join(", ", project.getRequiredSkillSets())
+        );
+
+        skillSetsLayout.add(
+                skillSetsKey,
+                skillSetsValue
+        );
+        return skillSetsLayout;
+    }
+
+    private VerticalLayout createAddressLayout() {
+        VerticalLayout addressLayout = new VerticalLayout();
+        style(addressLayout, true);
+
+        HtmlComponent addressKey = new H3(
+                "Ethereum Address"
+        );
+        HtmlComponent addressValue = new Paragraph(
+                project.getEthereumAddress()
+        );
+
+        addressLayout.add(
+                addressKey,
+                addressValue
+        );
+        return addressLayout;
+    }
+
+    private VerticalLayout createApplicationLayout() {
+        VerticalLayout applicationLayout = new VerticalLayout();
+        style(applicationLayout, true);
+
+        Component applicationButton = new TPPButton(
+                "Apply to Project",
+                buttonClickEvent -> new ProjectApplicationView(project)
+        );
+
+        applicationLayout.add(
+                applicationButton
+        );
+        return applicationLayout;
+    }
+
+    private void style(ThemableLayout layout, boolean padded) {
+        layout.setPadding(padded);
+        layout.setMargin(false);
+        layout.setSpacing(false);
     }
 }
