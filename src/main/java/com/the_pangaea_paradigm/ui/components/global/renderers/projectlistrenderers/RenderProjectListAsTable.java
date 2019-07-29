@@ -21,7 +21,7 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
 
         Grid<Project> projectTable = new Grid<>(Project.class, false);
         projectTable.setItems(projectList.getProjects());
-        projectTable.setColumns("projectName", "initiatorName", "shortDescription");
+        projectTable.setColumns("name", "initiatorName", "shortDescription");
         projectTable.setSelectionMode(Grid.SelectionMode.NONE);
         projectTable.setItemDetailsRenderer(new ComponentRenderer<>(project -> projectRenderer.render(project)));
 

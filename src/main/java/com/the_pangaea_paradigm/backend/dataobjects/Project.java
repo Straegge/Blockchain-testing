@@ -8,7 +8,7 @@ import java.util.List;
  */
 public final class Project implements Serializable {
 
-    private String projectName;
+    private String name;
     private String initiatorName;
     private String shortDescription;
     private String longDescription;
@@ -19,10 +19,10 @@ public final class Project implements Serializable {
 
     }
 
-    public Project(String projectName, String initiatorName,
+    public Project(String name, String initiatorName,
                    String shortDescription, String longDescription,
                    List<String> requiredSkillSets, String ethereumAddress) {
-        this.projectName = projectName;
+        this.name = name;
         this.initiatorName = initiatorName;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
@@ -35,8 +35,8 @@ public final class Project implements Serializable {
         return "";
     }
 
-    public String getProjectName() {
-        return projectName;
+    public String getName() {
+        return name;
     }
 
     public String getInitiatorName() {

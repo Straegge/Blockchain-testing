@@ -2,7 +2,7 @@ package com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers
 
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
-import com.the_pangaea_paradigm.ui.views.ProjectApplicationView;
+import com.the_pangaea_paradigm.ui.views.ProjectApplicationDialog;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H3;
@@ -63,7 +63,7 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
                 "Project"
         );
         HtmlComponent projectValue = new Paragraph(
-                project.getProjectName()
+                project.getName()
         );
         projectLayout.add(projectKey);
         projectLayout.add(projectValue);
@@ -145,9 +145,11 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
         VerticalLayout applicationLayout = new VerticalLayout();
         style(applicationLayout, true);
 
+        ProjectApplicationDialog projectApplicationDialog = new ProjectApplicationDialog(project);
+
         Component applicationButton = new TPPButton(
                 "Apply to Project",
-                buttonClickEvent -> new ProjectApplicationView(project)
+                buttonClickEvent -> projectApplicationDialog.open()
         );
 
         applicationLayout.add(
