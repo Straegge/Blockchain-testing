@@ -25,6 +25,12 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
         projectTable.setSelectionMode(Grid.SelectionMode.NONE);
         projectTable.setItemDetailsRenderer(new ComponentRenderer<>(project -> projectRenderer.render(project)));
 
+        style(projectTable);
+
         return projectTable;
+    }
+
+    private void style(Grid<Project> projectTable) {
+        projectTable.getStyle().set("width", "80%");
     }
 }

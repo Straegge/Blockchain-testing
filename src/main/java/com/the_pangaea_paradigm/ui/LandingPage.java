@@ -1,12 +1,9 @@
 package com.the_pangaea_paradigm.ui;
 
-import com.the_pangaea_paradigm.ui.components.global.Footer;
-import com.the_pangaea_paradigm.ui.components.global.Header;
 import com.the_pangaea_paradigm.ui.components.landingpage.Description;
 import com.the_pangaea_paradigm.ui.components.landingpage.Hero;
 import com.the_pangaea_paradigm.ui.components.landingpage.Usage;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
@@ -15,18 +12,11 @@ import com.vaadin.flow.router.Route;
  */
 @Route("")
 //@Theme(value = Lumo.class, variant = Lumo.DARK)
-public final class LandingPage extends VerticalLayout implements StyledComponent {
+public final class LandingPage extends PageLayoutWithHeaderAndFooter implements StyledComponent {
 
     public LandingPage() {
+        super(new VerticalLayout(new Hero(), new Description(), new Usage()));
         style();
-
-        final Component header = new Header();
-        final Component hero = new Hero();
-        final Component description = new Description();
-        final Component usage = new Usage();
-        final Component footer = new Footer();
-
-        add(header, hero, description, usage, footer);
     }
 
     @Override
