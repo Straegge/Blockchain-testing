@@ -39,7 +39,7 @@ public class ProjectListContainer extends Component implements StyledComponent, 
 
     private void render(ProjectList projectList) {
         Component renderedProjectList = projectListRenderer.render(projectList);
-        addDetachListener((ComponentEventListener<DetachEvent>) event -> remove(renderedProjectList));
+        addDetachListener((ComponentEventListener<DetachEvent>) event -> removeAll());
         add(renderedProjectList);
     }
     

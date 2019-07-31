@@ -15,7 +15,7 @@ public class Applicant {
     @Max(value = 500, message = "Description must be less than or equal to 500 characters")
     private String description;
 
-    private List<String> requiredSkillSets;
+    private List<String> skillSets;
 
     @Email
     @NotBlank(message = "Please enter your E-Mail Address")
