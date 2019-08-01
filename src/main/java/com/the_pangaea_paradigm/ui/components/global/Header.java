@@ -35,7 +35,6 @@ public final class Header extends HorizontalLayout implements StyledComponent {
         setAlignItems(FlexComponent.Alignment.START);
         getStyle()
                 .set("position", "fixed")
-                .set("margin", "0")
                 .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
     }
 }

@@ -52,6 +52,7 @@ public final class Description extends HorizontalLayout implements StyledCompone
         setDefaultVerticalComponentAlignment(Alignment.CENTER);
         getStyle()
                 .set("margin", "0")
+                .set("padding", "0")
                 .set("background-color", Colors.DEFAULT_LANDING_PAGE_DESCRIPTION_COLOR.toString());
     }
 }

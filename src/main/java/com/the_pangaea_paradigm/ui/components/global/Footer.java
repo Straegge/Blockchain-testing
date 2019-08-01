@@ -27,18 +27,18 @@ public final class Footer extends VerticalLayout implements StyledComponent {
 
     private void addLogo() {
         Image logo = new Image(GlobalConstants.LOGO_WITH_NAME, "TPP Header Logo");
-        logo.setHeight("40%");
+        logo.setHeight("90px");
         add(logo);
     }
 
     @Override
     public void style() {
-        setHeight("300px");
         setWidthFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         getStyle()
                 .set("margin", "0")
+                .set("padding", "35px 0px")
                 .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
     }
 }

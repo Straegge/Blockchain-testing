@@ -42,15 +42,17 @@ public class ProjectListContainer extends Component implements StyledComponent, 
         addDetachListener((ComponentEventListener<DetachEvent>) event -> removeAll());
         add(renderedProjectList);
     }
-    
+
     public void setProjectListRenderer(ProjectListRenderer projectListRenderer) {
         this.projectListRenderer = projectListRenderer;
     }
 
     @Override
     public void style() {
-        getElement().getStyle().set("width", "100%");
-        getElement().getStyle().set("margin", "0");
-        getElement().getStyle().set("padding", "0");
+        getElement().getStyle()
+                .set("width", "100%")
+                .set("margin", "0")
+                .set("padding", "0")
+                .set("flex", "1");
     }
 }
