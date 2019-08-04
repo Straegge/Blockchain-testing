@@ -21,7 +21,7 @@ public final class Footer extends VerticalLayout implements StyledComponent {
 
     private void addLinkToGithub() {
         Component anchor = new TPPAnchor(GlobalConstants.GITHUB_ADDRESS, "Project on GitHub");
-        anchor.getElement().getStyle().set("margin-bottom", "2em");
+        anchor.getElement().getStyle().set("margin-bottom", "1em");
         add(anchor);
     }
 

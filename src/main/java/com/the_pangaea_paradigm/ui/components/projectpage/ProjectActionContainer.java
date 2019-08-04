@@ -27,6 +27,7 @@ public class ProjectActionContainer extends HorizontalLayout implements StyledCo
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultVerticalComponentAlignment(Alignment.CENTER);
         getStyle()
+                .set("min-height", "100px")
                 .set("background-color", "#c2c2d6");
     }
 }
