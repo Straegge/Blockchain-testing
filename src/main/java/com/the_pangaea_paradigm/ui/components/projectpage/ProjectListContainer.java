@@ -51,6 +51,7 @@ public class ProjectListContainer extends Component implements StyledComponent, 
     public void style() {
         getElement().getStyle()
                 .set("width", "100%")
+                .set("height", "auto")
                 .set("margin", "0")
                 .set("padding", "0")
                 .set("flex", "1");

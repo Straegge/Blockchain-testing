@@ -18,19 +18,22 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
 
     @Override
     public Grid<Project> render(ProjectList projectList) {
-
         Grid<Project> projectTable = new Grid<>(Project.class, false);
+        style(projectTable);
+
         projectTable.setItems(projectList.getProjects());
         projectTable.setColumns("name", "initiatorName", "shortDescription");
         projectTable.setSelectionMode(Grid.SelectionMode.NONE);
         projectTable.setItemDetailsRenderer(new ComponentRenderer<>(project -> projectRenderer.render(project)));
-
-        style(projectTable);
+        projectTable.setHeightByRows(true);
 
         return projectTable;
     }
 
     private void style(Grid<Project> projectTable) {
-        projectTable.getStyle().set("width", "80%");
+        projectTable.getStyle()
+                .set("width", "90%")
+                .set("margin-left", "auto")
+                .set("margin-right", "auto");
     }
 }

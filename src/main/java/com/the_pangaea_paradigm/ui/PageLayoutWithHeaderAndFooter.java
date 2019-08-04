@@ -19,8 +19,8 @@ public abstract class PageLayoutWithHeaderAndFooter extends VerticalLayout {
         content.setSizeFull();
         content.getStyle()
                 .set("margin", "0")
-                .set("padding", "0")
-                .set("flex", "1");
+                .set("margin-top", "70px")
+                .set("padding", "0");
         content.add(footer);
 
         setSizeFull();

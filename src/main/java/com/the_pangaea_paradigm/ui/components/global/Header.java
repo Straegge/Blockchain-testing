@@ -31,10 +31,11 @@ public final class Header extends HorizontalLayout implements StyledComponent {
     public void style() {
         setHeight("70px");
         setWidthFull();
-        setPadding(true);
         setAlignItems(FlexComponent.Alignment.START);
         getStyle()
                 .set("position", "fixed")
+                .set("z-index", "1")
+                .set("padding", "10px")
                 .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
     }
 }

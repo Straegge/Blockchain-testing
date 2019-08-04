@@ -21,6 +21,7 @@ public final class TPPButton extends Composite<Button> implements StyledComponen
 
     public TPPButton(String text, ComponentEventListener<ClickEvent<Button>> clickEventListener) {
         style();
+        setAttributes();
 
         Button parent = getContent();
         parent.setText(text);
@@ -31,10 +32,13 @@ public final class TPPButton extends Composite<Button> implements StyledComponen
     public void style() {
         getContent().getStyle()
                 .set("cursor", "default")
-                .set("padding", "0.5em 1em")
+                .set("height", "auto")
+                .set("font-weight", "400")
+                .set("padding", "0.32em 1em")
                 .set("border-width", "1px")
                 .set("border-style", "solid")
                 .set("border-color", Colors.DEFAULT_BORDER_COLOR.toString())
+                .set("border-radius", "0")
                 .set("color", Colors.DEFAULT_TEXT_COLOR.toString())
                 .set("background-color", Colors.DEFAULT_BUTTON_COLOR.toString());
     }
