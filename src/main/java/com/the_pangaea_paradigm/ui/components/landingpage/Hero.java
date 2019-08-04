@@ -82,6 +82,6 @@ public final class Hero extends VerticalLayout implements StyledComponent {
         getStyle()
                 .set("height", "700px")
                 .set("padding", "100px 0px")
-                .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
+                .set("background-color", Colors.TPP_BLUE_COLOR.toString());
     }
 }

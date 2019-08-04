@@ -36,6 +36,6 @@ public final class Header extends HorizontalLayout implements StyledComponent {
                 .set("position", "fixed")
                 .set("z-index", "1")
                 .set("padding", "10px")
-                .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
+                .set("background-color", Colors.TPP_BLUE_COLOR.toString());
     }
 }

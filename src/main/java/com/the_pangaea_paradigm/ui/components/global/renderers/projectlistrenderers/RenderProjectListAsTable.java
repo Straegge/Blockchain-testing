@@ -25,15 +25,16 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
         projectTable.setColumns("name", "initiatorName", "shortDescription");
         projectTable.setSelectionMode(Grid.SelectionMode.NONE);
         projectTable.setItemDetailsRenderer(new ComponentRenderer<>(project -> projectRenderer.render(project)));
-        projectTable.setHeightByRows(true);
 
         return projectTable;
     }
 
     private void style(Grid<Project> projectTable) {
+        projectTable.setHeightByRows(true);
         projectTable.getStyle()
                 .set("width", "90%")
-                .set("margin-left", "auto")
-                .set("margin-right", "auto");
+                .set("min-height", "100%")
+                .set("margin", "0 auto")
+                .set("box-shadow", "rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px");
     }
 }

@@ -22,12 +22,13 @@ public class ProjectActionContainer extends HorizontalLayout implements StyledCo
 
     @Override
     public void style() {
-        setHeight("100px");
-        setWidthFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultVerticalComponentAlignment(Alignment.CENTER);
         getStyle()
+                .set("width", "90%")
                 .set("min-height", "100px")
-                .set("background-color", "#c2c2d6");
+                .set("margin-top", "30px")
+                .set("box-shadow", "rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px")
+                .set("background-color", "white");
     }
 }

@@ -39,6 +39,6 @@ public final class Footer extends VerticalLayout implements StyledComponent {
         getStyle()
                 .set("margin", "0")
                 .set("padding", "35px 0px")
-                .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
+                .set("background-color", Colors.TPP_BLUE_COLOR.toString());
     }
 }
