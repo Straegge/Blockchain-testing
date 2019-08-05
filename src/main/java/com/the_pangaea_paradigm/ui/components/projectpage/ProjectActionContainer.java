@@ -1,8 +1,8 @@
 package com.the_pangaea_paradigm.ui.components.projectpage;
 
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
+import com.the_pangaea_paradigm.ui.views.ProjectCreationDialog;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
-import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
@@ -15,8 +15,11 @@ public class ProjectActionContainer extends HorizontalLayout implements StyledCo
     }
 
     private void addCreateProjectButton() {
-        //TODO: Add ComponentEventListener to open ProjectCreationView
-        Component createProjectButton = new TPPButton("Create Project", ClickEvent::getClickCount);
+        ProjectCreationDialog projectCreationDialog = new ProjectCreationDialog();
+        Component createProjectButton = new TPPButton(
+                "Create Project",
+                buttonClickEvent -> projectCreationDialog.open()
+        );
         add(createProjectButton);
     }
 
