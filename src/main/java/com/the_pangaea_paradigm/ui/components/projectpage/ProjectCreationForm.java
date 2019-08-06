@@ -7,14 +7,13 @@ import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.data.binder.Binder;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.vaadin.flow.data.binder.BeanValidationBinder;
+import com.vaadin.flow.data.value.ValueChangeMode;
 
 public class ProjectCreationForm extends Composite<FormLayout> implements StyledComponent {
 
-    private Binder<Project> binder = new Binder<>(Project.class);
+    private BeanValidationBinder<Project> binder = new BeanValidationBinder<>(Project.class);
+    private Project projectBeingEdited = new Project();
 
     public ProjectCreationForm() {
         style();
@@ -24,45 +23,62 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
         addShortDescriptionField();
         addLongDescriptionField();
         addRequiredSkillSetFields();
+        addEmailAddressField();
         addEthereumAddressField();
         addCancelButton();
         addCreateButton();
     }
 
     private void addNameField() {
-        TextField projectName = new TextField();
+        TextField name = new TextField();
 
-        getContent().addFormItem(projectName, "Project Name:");
+        name.setValueChangeMode(ValueChangeMode.EAGER);
+
+        binder.bind(name, "name");
+        getContent().addFormItem(name, "Project Name:");
     }
 
     private void addInitiatorNameField() {
         TextField initiatorName = new TextField();
 
-        getContent().addFormItem(initiatorName, "Project Name:");
+        binder.bind(initiatorName, "initiatorName");
+        getContent().addFormItem(initiatorName, "Initiator Name:");
     }
 
     private void addShortDescriptionField() {
         TextField shortDescription = new TextField();
 
-        getContent().addFormItem(shortDescription, "Project Name:");
+        binder.bind(shortDescription, "shortDescription");
+        getContent().addFormItem(shortDescription, "Short Description:");
     }
 
     private void addLongDescriptionField() {
         TextField longDescription = new TextField();
 
-        getContent().addFormItem(longDescription, "Project Name:");
+        binder.bind(longDescription, "longDescription");
+        getContent().addFormItem(longDescription, "Long Description:");
     }
 
     private void addRequiredSkillSetFields() {
-        List<TextField> requiredSkillSets = new ArrayList<>();
+        //TODO: Split up SkillSets
+        TextField requiredSkillSets = new TextField();
 
-        //getContent().addFormItem(name, "Skill Sets:");
+        binder.bind(requiredSkillSets, "requiredSkillSets");
+        getContent().addFormItem(requiredSkillSets, "Skill Sets:");
+    }
+
+    private void addEmailAddressField() {
+        TextField emailAddress = new TextField();
+
+        binder.bind(emailAddress, "emailAddress");
+        getContent().addFormItem(emailAddress, "E-Mail Address:");
     }
 
     private void addEthereumAddressField() {
-        TextField name = new TextField();
+        TextField ethereumAddress = new TextField();
 
-        getContent().addFormItem(name, "Project Name:");
+        binder.bind(ethereumAddress, "ethereumAddress");
+        getContent().addFormItem(ethereumAddress, "Ethereum Address:");
     }
 
     private void addCancelButton() {
@@ -72,7 +88,11 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
     }
 
     private void addCreateButton() {
-        TPPButton createButton = new TPPButton("Create", ClickEvent::getClickCount);
+        TPPButton createButton = new TPPButton("Create", buttonClickEvent -> {
+            if (binder.writeBeanIfValid(projectBeingEdited)) {
+                System.out.println(projectBeingEdited.getName());
+            }
+        });
 
         getContent().addFormItem(createButton, "");
     }

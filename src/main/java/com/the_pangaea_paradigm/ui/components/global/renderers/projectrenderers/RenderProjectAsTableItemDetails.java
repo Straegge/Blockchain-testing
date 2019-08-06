@@ -112,8 +112,12 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
         HtmlComponent skillSetsKey = new H3(
                 "Skill Sets"
         );
+        //TODO: Split up SkillSets
+//        HtmlComponent skillSetsValue = new Paragraph(
+//                String.join(", ", project.getRequiredSkillSets())
+//        );
         HtmlComponent skillSetsValue = new Paragraph(
-                String.join(", ", project.getRequiredSkillSets())
+                project.getRequiredSkillSets()
         );
 
         skillSetsLayout.add(

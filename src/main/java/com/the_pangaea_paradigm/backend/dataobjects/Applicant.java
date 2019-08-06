@@ -7,18 +7,18 @@ import java.util.List;
 
 public class Applicant {
 
-    @NotBlank(message = "Please enter the Name you wish to apply with")
+    @NotBlank(message = "Please enter the name you wish to apply with")
     @Max(value = 100, message = "Name must be less than or equal to 100 characters")
     private String name;
 
-    @NotBlank(message = "Please write a short Description of yourself")
+    @NotBlank(message = "Please write a short description of yourself")
     @Max(value = 500, message = "Description must be less than or equal to 500 characters")
     private String description;
 
     private List<String> skillSets;
 
     @Email
-    @NotBlank(message = "Please enter your E-Mail Address")
+    @NotBlank(message = "Please enter your E-Mail address")
     private String emailAddress;
 
     private List<String> otherContactDetails;
