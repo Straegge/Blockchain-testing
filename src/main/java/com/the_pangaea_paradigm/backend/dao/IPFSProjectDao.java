@@ -1,9 +1,17 @@
 package com.the_pangaea_paradigm.backend.dao;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.the_pangaea_paradigm.Application;
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
+import com.the_pangaea_paradigm.utilities.GlobalConstants;
+import io.ipfs.api.MerkleNode;
+import io.ipfs.api.NamedStreamable;
+import io.ipfs.multihash.Multihash;
 import org.springframework.stereotype.Repository;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -80,8 +88,28 @@ public class IPFSProjectDao implements ProjectDao {
     }
 
     @Override
-    public void save(Project project) {
+    public void save(Project project) throws IOException {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Multihash projectListMultihash = Application.PROJECT_LIST_FILE_IPFS_HASH;
 
+        //Fetch ProjectList from IPFS
+        String projectListByteArray = new String(GlobalConstants.INFURA_IPFS_GATEWAY_INSTANCE.cat(projectListMultihash));
+        ProjectList projectList = gson.fromJson(projectListByteArray, ProjectList.class);
+
+        //Add Project
+        projectList.getProjects().add(project);
+
+        //Wrap the ProjectList in a byte array
+        String projectListJsonString = gson.toJson(projectList);
+
+        NamedStreamable.ByteArrayWrapper projectListStreamable =
+                new NamedStreamable.ByteArrayWrapper(projectListJsonString.getBytes());
+
+        //Add new ProjectList to IPFS
+        MerkleNode addResult = GlobalConstants.INFURA_IPFS_GATEWAY_INSTANCE.add(projectListStreamable, true, false).get(0);
+
+        //Update Hash pointing to ProjectList
+        Application.PROJECT_LIST_FILE_IPFS_HASH = addResult.hash;
     }
 
     @Override

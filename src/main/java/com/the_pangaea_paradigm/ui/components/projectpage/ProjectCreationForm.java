@@ -1,17 +1,23 @@
 package com.the_pangaea_paradigm.ui.components.projectpage;
 
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.services.ProjectServiceInterface;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
-import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.value.ValueChangeMode;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.io.IOException;
 
 public class ProjectCreationForm extends Composite<FormLayout> implements StyledComponent {
 
+    @Autowired
+    private ProjectServiceInterface projectServiceInterface;
     private BeanValidationBinder<Project> binder = new BeanValidationBinder<>(Project.class);
     private Project projectBeingEdited = new Project();
 
@@ -82,7 +88,10 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
     }
 
     private void addCancelButton() {
-        TPPButton cancelButton = new TPPButton("Cancel", ClickEvent::getClickCount);
+        TPPButton cancelButton = new TPPButton("Cancel", buttonClickEvent -> {
+            Dialog parent = (Dialog) getParent().orElseThrow(() -> new IllegalStateException("The dialog you tried to close no longer exists"));
+            parent.close();
+        });
 
         getContent().addFormItem(cancelButton, "");
     }
@@ -90,7 +99,13 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
     private void addCreateButton() {
         TPPButton createButton = new TPPButton("Create", buttonClickEvent -> {
             if (binder.writeBeanIfValid(projectBeingEdited)) {
-                System.out.println(projectBeingEdited.getName());
+                try {
+                    projectServiceInterface.save(projectBeingEdited);
+
+                    //TODO: Success Notification
+                } catch (IOException e) {
+                    //TODO: Error Notification
+                }
             }
         });
 
