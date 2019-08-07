@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 /**
  * Concrete Data Access Object for executing CRUD operations on Projects
@@ -22,6 +23,8 @@ import java.util.Optional;
  */
 @Repository
 public class IPFSProjectDao implements ProjectDao {
+
+    Logger logger = Logger.getLogger(IPFSProjectDao.class.getName());
 
     @Override
     public Optional<Project> get(long id) {
@@ -110,6 +113,8 @@ public class IPFSProjectDao implements ProjectDao {
 
         //Update Hash pointing to ProjectList
         Application.PROJECT_LIST_FILE_IPFS_HASH = addResult.hash;
+
+        logger.info("New IPFS Hash : " + addResult.hash);
     }
 
     @Override

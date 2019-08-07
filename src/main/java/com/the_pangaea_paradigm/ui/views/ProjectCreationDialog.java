@@ -4,18 +4,23 @@ import com.the_pangaea_paradigm.ui.components.projectpage.ProjectCreationForm;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
  */
+@SpringComponent
+@UIScope
 public final class ProjectCreationDialog extends Composite<Dialog> implements StyledComponent {
 
-    public ProjectCreationDialog() {
+    public ProjectCreationDialog(@Autowired ProjectCreationForm projectCreationForm) {
         style();
         getContent().setCloseOnEsc(false);
-        //getContent().setCloseOnOutsideClick(false);
+        getContent().setCloseOnOutsideClick(false);
 
-        getContent().add(new ProjectCreationForm());
+        getContent().add(projectCreationForm.create());
     }
 
     public void open() {

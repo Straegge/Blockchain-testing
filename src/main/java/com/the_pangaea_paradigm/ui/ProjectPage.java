@@ -12,8 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Route(Routes.PROJECT_PAGE_ROUTE)
 public final class ProjectPage extends PageLayoutWithHeaderAndFooter {
 
-    public ProjectPage(@Autowired ProjectListContainer projectListContainer) {
-        super(new ProjectActionContainer(), projectListContainer.create());
+    public ProjectPage(
+            @Autowired ProjectActionContainer projectActionContainer,
+            @Autowired ProjectListContainer projectListContainer
+    ) {
+        super(projectActionContainer.create(), projectListContainer.create());
     }
-
 }

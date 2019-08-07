@@ -4,16 +4,25 @@ import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.services.ProjectServiceInterface;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.value.ValueChangeMode;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 
+/**
+ *
+ */
+@SpringComponent
+@UIScope
 public class ProjectCreationForm extends Composite<FormLayout> implements StyledComponent {
 
     @Autowired
@@ -21,7 +30,7 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
     private BeanValidationBinder<Project> binder = new BeanValidationBinder<>(Project.class);
     private Project projectBeingEdited = new Project();
 
-    public ProjectCreationForm() {
+    public Component create() {
         style();
 
         addNameField();
@@ -33,6 +42,8 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
         addEthereumAddressField();
         addCancelButton();
         addCreateButton();
+
+        return this;
     }
 
     private void addNameField() {
@@ -102,9 +113,11 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
                 try {
                     projectServiceInterface.save(projectBeingEdited);
 
-                    //TODO: Success Notification
+                    Notification notification = new Notification("Project was successfully created!", 0, Notification.Position.MIDDLE);
+                    notification.open();
                 } catch (IOException e) {
-                    //TODO: Error Notification
+                    Notification notification = new Notification("Project Creation failed!", 0, Notification.Position.MIDDLE);
+                    notification.open();
                 }
             }
         });

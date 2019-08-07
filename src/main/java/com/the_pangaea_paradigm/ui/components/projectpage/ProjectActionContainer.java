@@ -5,17 +5,29 @@ import com.the_pangaea_paradigm.ui.views.ProjectCreationDialog;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
+import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ *
+ */
+@SpringComponent
+@UIScope
 public class ProjectActionContainer extends HorizontalLayout implements StyledComponent {
 
-    public ProjectActionContainer() {
+    @Autowired
+    private ProjectCreationDialog projectCreationDialog;
+
+    public HorizontalLayout create() {
         style();
 
         addCreateProjectButton();
+
+        return this;
     }
 
     private void addCreateProjectButton() {
-        ProjectCreationDialog projectCreationDialog = new ProjectCreationDialog();
         Component createProjectButton = new TPPButton(
                 "Create Project",
                 buttonClickEvent -> projectCreationDialog.open()
