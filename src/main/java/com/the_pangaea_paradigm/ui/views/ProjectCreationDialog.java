@@ -29,7 +29,7 @@ public final class ProjectCreationDialog extends Composite<Dialog> implements St
 
     @Override
     public void style() {
-        getContent().setWidth("auto");
+        getContent().setWidth("900px");
         getContent().setHeight("auto");
     }
 }

@@ -9,9 +9,11 @@ import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
-import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,81 +35,91 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
     public Component create() {
         style();
 
-        addNameField();
-        addInitiatorNameField();
-        addShortDescriptionField();
-        addLongDescriptionField();
-        addRequiredSkillSetFields();
-        addEmailAddressField();
-        addEthereumAddressField();
-        addCancelButton();
-        addCreateButton();
+        FormLayout parent = getContent();
+        parent.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 1));
+        HorizontalLayout buttonLayout = new HorizontalLayout(createCreateButton(), createCancelButton());
+        buttonLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.CENTER);
+        buttonLayout.getStyle().set("margin-top", "20px");
+
+        parent.add(
+                new HorizontalLayout(
+                        createNameField("15%"),
+                        createInitiatorNameField("15%"),
+                        createShortDescriptionField("70%")
+                ),
+                new HorizontalLayout(
+                        createLongDescriptionField("100%", "170px")
+                ),
+                new HorizontalLayout(
+                        createRequiredSkillSetFields("33%"),
+                        createEmailAddressField("33%"),
+                        createEthereumAddressField("33%")
+                ),
+                buttonLayout
+        );
 
         return this;
     }
 
-    private void addNameField() {
-        TextField name = new TextField();
-
-        name.setValueChangeMode(ValueChangeMode.EAGER);
+    private TextField createNameField(String width) {
+        TextField name = new TextField("Project Name:");
+        name.setWidth(width);
 
         binder.bind(name, "name");
-        getContent().addFormItem(name, "Project Name:");
+        return name;
     }
 
-    private void addInitiatorNameField() {
-        TextField initiatorName = new TextField();
+    private TextField createInitiatorNameField(String width) {
+        TextField initiatorName = new TextField("Initiator Name:");
+        initiatorName.setWidth(width);
 
         binder.bind(initiatorName, "initiatorName");
-        getContent().addFormItem(initiatorName, "Initiator Name:");
+        return initiatorName;
     }
 
-    private void addShortDescriptionField() {
-        TextField shortDescription = new TextField();
+    private TextField createShortDescriptionField(String width) {
+        TextField shortDescription = new TextField("Short Description:");
+        shortDescription.setWidth(width);
 
         binder.bind(shortDescription, "shortDescription");
-        getContent().addFormItem(shortDescription, "Short Description:");
+        return shortDescription;
     }
 
-    private void addLongDescriptionField() {
-        TextField longDescription = new TextField();
+    private TextArea createLongDescriptionField(String width, String height) {
+        TextArea longDescription = new TextArea("Long Description:");
+        longDescription.setWidth(width);
+        longDescription.setHeight(height);
 
         binder.bind(longDescription, "longDescription");
-        getContent().addFormItem(longDescription, "Long Description:");
+        return longDescription;
     }
 
-    private void addRequiredSkillSetFields() {
+    private TextField createRequiredSkillSetFields(String width) {
         //TODO: Split up SkillSets
-        TextField requiredSkillSets = new TextField();
+        TextField requiredSkillSets = new TextField("Skill Sets:");
+        requiredSkillSets.setWidth(width);
 
         binder.bind(requiredSkillSets, "requiredSkillSets");
-        getContent().addFormItem(requiredSkillSets, "Skill Sets:");
+        return requiredSkillSets;
     }
 
-    private void addEmailAddressField() {
-        TextField emailAddress = new TextField();
+    private TextField createEmailAddressField(String width) {
+        TextField emailAddress = new TextField("E-Mail Address:");
+        emailAddress.setWidth(width);
 
         binder.bind(emailAddress, "emailAddress");
-        getContent().addFormItem(emailAddress, "E-Mail Address:");
+        return emailAddress;
     }
 
-    private void addEthereumAddressField() {
-        TextField ethereumAddress = new TextField();
+    private TextField createEthereumAddressField(String width) {
+        TextField ethereumAddress = new TextField("Ethereum Address:");
+        ethereumAddress.setWidth(width);
 
         binder.bind(ethereumAddress, "ethereumAddress");
-        getContent().addFormItem(ethereumAddress, "Ethereum Address:");
+        return ethereumAddress;
     }
 
-    private void addCancelButton() {
-        TPPButton cancelButton = new TPPButton("Cancel", buttonClickEvent -> {
-            Dialog parent = (Dialog) getParent().orElseThrow(() -> new IllegalStateException("The dialog you tried to close no longer exists"));
-            parent.close();
-        });
-
-        getContent().addFormItem(cancelButton, "");
-    }
-
-    private void addCreateButton() {
+    private TPPButton createCreateButton() {
         TPPButton createButton = new TPPButton("Create", buttonClickEvent -> {
             if (binder.writeBeanIfValid(projectBeingEdited)) {
                 try {
@@ -122,7 +134,22 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
             }
         });
 
-        getContent().addFormItem(createButton, "");
+        createButton.getContent().getStyle()
+                .set("width", "180px")
+                .set("margin-right", "90px");
+
+        return createButton;
+    }
+
+    private TPPButton createCancelButton() {
+        TPPButton cancelButton = new TPPButton("Cancel", buttonClickEvent -> {
+            Dialog parent = (Dialog) getParent().orElseThrow(() -> new IllegalStateException("The dialog you tried to close no longer exists"));
+            parent.close();
+        });
+
+        cancelButton.getContent().setWidth("180px");
+
+        return cancelButton;
     }
 
     @Override
