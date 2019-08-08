@@ -41,20 +41,47 @@ public class Project implements Serializable {
 
     }
 
-    public Project(String name, String initiatorName,
-                   String shortDescription, String longDescription,
-                   String requiredSkillSets, String ethereumAddress) {
+    public Project(
+            @NotBlank(message = "Please enter a name for your Project")
+            @Size(max = 100, message = "Project name must be less than or equal to 100 characters")
+                    String name,
+            @NotBlank(message = "Please enter a name you wish to create your Project under")
+            @Size(max = 100, message = "Initiator name must be less than or equal to 100 characters")
+                    String initiatorName,
+            @NotBlank(message = "Please describe your Project with a short, expressive sentence")
+            @Size(max = 100, message = "Short Description must be less than or equal to 100 characters")
+                    String shortDescription,
+            @NotBlank(message = "Please write a more elaborate description of your Project")
+            @Size(max = 1500, message = "Description must be less than or equal to 1500 characters")
+                    String longDescription,
+            @Size(max = 200, message = "Please list some skill sets needed for your Project in less than 200 characters")
+                    String requiredSkillSets,
+            @Email @NotBlank(message = "Please enter the E-Mail address you want to receive applications to")
+                    String emailAddress,
+            @NotBlank(message = "Please enter the Ethereum address of your Project")
+            @Size(max = 100, message = "Ethereum address must be less than or equal to 100 characters")
+                    String ethereumAddress
+    ) {
         this.name = name;
         this.initiatorName = initiatorName;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
         this.requiredSkillSets = requiredSkillSets;
+        this.emailAddress = emailAddress;
         this.ethereumAddress = ethereumAddress;
     }
 
     @Override
     public String toString() {
-        return "";
+        return "Project{" +
+                "name='" + name + '\'' +
+                ", initiatorName='" + initiatorName + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", longDescription='" + longDescription + '\'' +
+                ", requiredSkillSets='" + requiredSkillSets + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", ethereumAddress='" + ethereumAddress + '\'' +
+                '}';
     }
 
     public String getName() {

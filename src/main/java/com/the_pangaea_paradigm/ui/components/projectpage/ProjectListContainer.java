@@ -3,7 +3,6 @@ package com.the_pangaea_paradigm.ui.components.projectpage;
 import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
 import com.the_pangaea_paradigm.services.ProjectServiceInterface;
 import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers.ProjectListRenderer;
-import com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers.RenderProjectListAsTable;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEventListener;
@@ -26,7 +25,8 @@ public class ProjectListContainer extends Component implements StyledComponent, 
 
     @Autowired
     private ProjectServiceInterface projectServiceInterface;
-    private ProjectListRenderer projectListRenderer = new RenderProjectListAsTable();
+    @Autowired
+    private ProjectListRenderer projectListRenderer;
 
     public Component create() {
         style();

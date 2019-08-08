@@ -11,6 +11,9 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.ThemableLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Concrete <tt>ProjectRenderer</tt> Strategy.
@@ -18,8 +21,12 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
  * Renders the <tt>Project</tt> as a a VerticalLayout, typically used as the
  * ComponentRenderer to display project details in a table.
  */
+@SpringComponent
+@UIScope
 public class RenderProjectAsTableItemDetails implements ProjectRenderer {
 
+    @Autowired
+    private ProjectApplicationDialog projectApplicationDialog;
     private Project project;
 
     @Override
@@ -149,7 +156,7 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
         VerticalLayout applicationLayout = new VerticalLayout();
         style(applicationLayout, true);
 
-        ProjectApplicationDialog projectApplicationDialog = new ProjectApplicationDialog(project);
+        projectApplicationDialog.setProject(project);
 
         Component applicationButton = new TPPButton(
                 "Apply to Project",
