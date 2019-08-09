@@ -5,34 +5,24 @@ import com.the_pangaea_paradigm.ui.components.projectpage.ProjectApplicationForm
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dialog.Dialog;
-import com.vaadin.flow.spring.annotation.SpringComponent;
-import com.vaadin.flow.spring.annotation.UIScope;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
  */
-@SpringComponent
-@UIScope
 public final class ProjectApplicationDialog extends Composite<Dialog> implements StyledComponent {
 
-    private Project project;
-
-    public ProjectApplicationDialog(@Autowired ProjectApplicationForm projectApplicationForm) {
+    public ProjectApplicationDialog(Project project) {
         style();
 
-        getContent().setCloseOnEsc(false);
-        getContent().setCloseOnOutsideClick(false);
+        Dialog parent = getContent();
 
-        getContent().add(projectApplicationForm.create(project));
+        parent.setCloseOnEsc(false);
+
+        parent.add(new ProjectApplicationForm().create(project));
     }
 
     public void open() {
         getContent().open();
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 
     @Override

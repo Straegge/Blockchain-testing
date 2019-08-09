@@ -17,10 +17,12 @@ public final class ProjectCreationDialog extends Composite<Dialog> implements St
 
     public ProjectCreationDialog(@Autowired ProjectCreationForm projectCreationForm) {
         style();
-        getContent().setCloseOnEsc(false);
-        getContent().setCloseOnOutsideClick(false);
 
-        getContent().add(projectCreationForm.create());
+        Dialog parent = getContent();
+
+        parent.setCloseOnEsc(false);
+
+        parent.add(projectCreationForm.create());
     }
 
     public void open() {

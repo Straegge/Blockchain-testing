@@ -3,23 +3,18 @@ package com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrende
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
 import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
 import com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers.ProjectRenderer;
+import com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers.RenderProjectAsTableItemDetails;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
-import com.vaadin.flow.spring.annotation.SpringComponent;
-import com.vaadin.flow.spring.annotation.UIScope;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Concrete <tt>ProjectListRenderer</tt> Strategy.
  * <p>
  * Renders the <tt>ProjectList</tt> as a Table with rows and columns.
  */
-@SpringComponent
-@UIScope
 public class RenderProjectListAsTable implements ProjectListRenderer {
 
-    @Autowired
-    private ProjectRenderer projectRenderer;
+    private ProjectRenderer projectRenderer = new RenderProjectAsTableItemDetails();
 
     @Override
     public Grid<Project> render(ProjectList projectList) {
@@ -32,6 +27,10 @@ public class RenderProjectListAsTable implements ProjectListRenderer {
         projectTable.setItemDetailsRenderer(new ComponentRenderer<>(project -> projectRenderer.render(project)));
 
         return projectTable;
+    }
+
+    public void setProjectRenderer(ProjectRenderer projectRenderer) {
+        this.projectRenderer = projectRenderer;
     }
 
     private void style(Grid<Project> projectTable) {

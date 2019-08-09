@@ -103,7 +103,7 @@ public class ProjectApplicationForm extends Composite<FormLayout> implements Sty
 
     private TPPButton createApplyButton(Project project) {
         TPPButton createButton = new TPPButton("Apply", buttonClickEvent -> {
-            System.out.println("Project E-Mail: " + project.getEmailAddress());
+            System.out.println(project);
 
             if (binder.writeBeanIfValid(applicantBeingEdited)) {
                 try {
