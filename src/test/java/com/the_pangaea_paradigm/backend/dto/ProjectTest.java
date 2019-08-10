@@ -15,7 +15,7 @@ public class ProjectTest {
         o1.setShortDescription("shortdescription");
         o1.setLongDescription("longdescription");
         o1.setRequiredSkillSets("requiredskillsets");
-        o1.setEmailAddress("test@test.com");
+        o1.setEmailAddress("emailaddress");
         o1.setEthereumAddress("ethereumaddress");
 
         Project o2 = new Project();
@@ -24,7 +24,7 @@ public class ProjectTest {
         o2.setShortDescription("shortdescription");
         o2.setLongDescription("longdescription");
         o2.setRequiredSkillSets("requiredskillsets");
-        o2.setEmailAddress("test@test.com");
+        o2.setEmailAddress("emailaddress");
         o2.setEthereumAddress("ethereumaddress");
 
         assertNotEquals(o1, o2);
