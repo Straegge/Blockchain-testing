@@ -4,6 +4,8 @@ import com.the_pangaea_paradigm.Application;
 import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
 import com.the_pangaea_paradigm.ui.dialogs.ProjectCreationDialog;
+import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.DetachEvent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
@@ -24,6 +26,8 @@ public class ProjectActionContainer extends HorizontalLayout implements StyledCo
 
         addCreateProjectButton();
         addCurrentProjectListFileIPFSHash();
+
+        addDetachListener((ComponentEventListener<DetachEvent>) event -> removeAll());
 
         return this;
     }
