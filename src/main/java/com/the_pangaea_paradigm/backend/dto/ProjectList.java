@@ -1,4 +1,4 @@
-package com.the_pangaea_paradigm.backend.dataobjects;
+package com.the_pangaea_paradigm.backend.dto;
 
 import java.io.Serializable;
 import java.util.ArrayList;

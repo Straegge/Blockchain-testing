@@ -1,8 +1,8 @@
 package com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers;
 
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.backend.dto.Project;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
-import com.the_pangaea_paradigm.ui.views.ProjectApplicationDialog;
+import com.the_pangaea_paradigm.ui.dialogs.ProjectApplicationDialog;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H3;

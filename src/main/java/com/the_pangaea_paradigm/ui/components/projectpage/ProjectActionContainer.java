@@ -1,8 +1,8 @@
 package com.the_pangaea_paradigm.ui.components.projectpage;
 
+import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
-import com.the_pangaea_paradigm.ui.views.ProjectCreationDialog;
-import com.the_pangaea_paradigm.utilities.StyledComponent;
+import com.the_pangaea_paradigm.ui.dialogs.ProjectCreationDialog;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.spring.annotation.SpringComponent;

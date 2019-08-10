@@ -1,7 +1,7 @@
-package com.the_pangaea_paradigm.ui.views;
+package com.the_pangaea_paradigm.ui.dialogs;
 
+import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.projectpage.ProjectCreationForm;
-import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.spring.annotation.SpringComponent;

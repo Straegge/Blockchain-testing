@@ -1,7 +1,7 @@
 package com.the_pangaea_paradigm.backend.communication;
 
-import com.the_pangaea_paradigm.backend.dataobjects.Applicant;
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.backend.dto.Applicant;
+import com.the_pangaea_paradigm.backend.dto.Project;
 
 import java.io.UnsupportedEncodingException;
 

@@ -1,6 +1,6 @@
 package com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers;
 
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.backend.dto.Project;
 import com.vaadin.flow.component.Component;
 
 /**

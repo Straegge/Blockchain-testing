@@ -1,8 +1,9 @@
 package com.the_pangaea_paradigm.services;
 
 import com.the_pangaea_paradigm.backend.communication.EMailWriter;
-import com.the_pangaea_paradigm.backend.dataobjects.Applicant;
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
+import com.the_pangaea_paradigm.backend.dto.Applicant;
+import com.the_pangaea_paradigm.backend.dto.Project;
+import com.the_pangaea_paradigm.services.interfaces.ApplicantServiceInterface;
 
 import java.io.UnsupportedEncodingException;
 

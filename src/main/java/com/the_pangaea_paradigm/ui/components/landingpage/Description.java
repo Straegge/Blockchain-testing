@@ -1,7 +1,7 @@
 package com.the_pangaea_paradigm.ui.components.landingpage;
 
+import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.utilities.Colors;
-import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Paragraph;

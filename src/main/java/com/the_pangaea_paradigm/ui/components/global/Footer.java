@@ -2,7 +2,6 @@ package com.the_pangaea_paradigm.ui.components.global;
 
 import com.the_pangaea_paradigm.utilities.Colors;
 import com.the_pangaea_paradigm.utilities.GlobalConstants;
-import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;

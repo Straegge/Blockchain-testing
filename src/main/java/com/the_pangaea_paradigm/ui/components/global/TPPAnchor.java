@@ -1,7 +1,6 @@
 package com.the_pangaea_paradigm.ui.components.global;
 
 import com.the_pangaea_paradigm.utilities.Colors;
-import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.html.Anchor;
 

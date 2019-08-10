@@ -1,9 +1,9 @@
 package com.the_pangaea_paradigm.ui.components.projectpage;
 
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
-import com.the_pangaea_paradigm.services.ProjectServiceInterface;
+import com.the_pangaea_paradigm.backend.dto.Project;
+import com.the_pangaea_paradigm.services.interfaces.ProjectServiceInterface;
+import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
-import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dialog.Dialog;

@@ -1,7 +1,7 @@
-package com.the_pangaea_paradigm.backend.dao;
+package com.the_pangaea_paradigm.backend.dao.interfaces;
 
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
-import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
+import com.the_pangaea_paradigm.backend.dto.Project;
+import com.the_pangaea_paradigm.backend.dto.ProjectList;
 
 import java.io.IOException;
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers;
 
-import com.the_pangaea_paradigm.backend.dataobjects.Project;
-import com.the_pangaea_paradigm.backend.dataobjects.ProjectList;
+import com.the_pangaea_paradigm.backend.dto.Project;
+import com.the_pangaea_paradigm.backend.dto.ProjectList;
 import com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers.ProjectRenderer;
 import com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers.RenderProjectAsTableItemDetails;
 import com.vaadin.flow.component.grid.Grid;

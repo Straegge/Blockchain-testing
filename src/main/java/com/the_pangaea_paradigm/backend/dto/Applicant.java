@@ -1,4 +1,4 @@
-package com.the_pangaea_paradigm.backend.dataobjects;
+package com.the_pangaea_paradigm.backend.dto;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

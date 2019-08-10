@@ -1,10 +1,10 @@
 package com.the_pangaea_paradigm.ui.components.landingpage;
 
 import com.the_pangaea_paradigm.ui.ProjectPage;
+import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.global.TPPRouterLink;
 import com.the_pangaea_paradigm.utilities.Colors;
 import com.the_pangaea_paradigm.utilities.GlobalConstants;
-import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H1;
