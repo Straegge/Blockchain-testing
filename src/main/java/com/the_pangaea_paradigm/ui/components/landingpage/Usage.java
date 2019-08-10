@@ -17,7 +17,7 @@ public final class Usage extends HorizontalLayout implements StyledComponent {
 
         //TODO: Add Image
 
-        VerticalLayout usage = new VerticalLayout(createUsage());
+        VerticalLayout usage = createUsage();
         usage.getStyle()
                 .set("width", "35%")
                 .set("margin", "50px 20px");
@@ -26,7 +26,7 @@ public final class Usage extends HorizontalLayout implements StyledComponent {
     }
 
     private VerticalLayout createUsage() {
-        H2 title = new H2("Create Or Apply, Permanently");
+        H2 title = new H2("Create or Apply, Permanently");
 
         Paragraph firstParagraph = new Paragraph(
                 "Projects created in the application are persistently saved on IPFS. They're accessible to " +

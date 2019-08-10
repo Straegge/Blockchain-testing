@@ -27,7 +27,7 @@ public final class ProjectApplicationDialog extends Composite<Dialog> implements
 
     @Override
     public void style() {
-        getContent().setWidth("700px");
+        getContent().setWidth("900px");
         getContent().setHeight("auto");
     }
 }
