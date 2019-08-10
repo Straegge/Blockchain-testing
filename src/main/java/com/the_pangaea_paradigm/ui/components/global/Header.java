@@ -19,8 +19,7 @@ public final class Header extends HorizontalLayout implements StyledComponent {
     }
 
     private void addHeaderLogo() {
-        //TODO: Fix Logo (make more visible)
-        Image logo = new Image(GlobalConstants.LOGO_WITH_NAME, "TPP Header Logo");
+        Image logo = new Image(GlobalConstants.HEADER_LOGO, "TPP Header Logo");
         logo.addClickListener(e -> logo.getUI().ifPresent(ui -> ui.navigate(LandingPage.class)));
         logo.setHeightFull();
         add(logo);

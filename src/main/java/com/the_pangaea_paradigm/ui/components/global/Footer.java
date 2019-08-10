@@ -25,7 +25,7 @@ public final class Footer extends VerticalLayout implements StyledComponent {
     }
 
     private void addLogo() {
-        Image logo = new Image(GlobalConstants.LOGO_WITH_NAME, "TPP Header Logo");
+        Image logo = new Image(GlobalConstants.FOOTER_LOGO, "TPP Footer Logo");
         logo.setHeight("90px");
         add(logo);
     }
