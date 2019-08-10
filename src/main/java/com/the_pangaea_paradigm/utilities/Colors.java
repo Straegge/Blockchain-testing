@@ -11,7 +11,7 @@ public enum Colors {
     TPP_BLUE_COLOR("#000099"),
     DEFAULT_BACKGROUND_COLOR("#f2f2f2"),
     DEFAULT_LANDING_PAGE_DESCRIPTION_COLOR("#9999ff"),
-    DEFAULT_LANDING_PAGE_USAGE_COLOR("#c1f0f0");
+    DEFAULT_LANDING_PAGE_USAGE_COLOR("#e6ffff");
 
     private final String colorName;
 

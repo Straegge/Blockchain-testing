@@ -5,7 +5,6 @@ import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.global.TPPRouterLink;
 import com.the_pangaea_paradigm.utilities.Colors;
 import com.the_pangaea_paradigm.utilities.GlobalConstants;
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
@@ -31,7 +30,7 @@ public final class Hero extends VerticalLayout implements StyledComponent {
 
     private void addLogo() {
         HtmlComponent logo = new Image(GlobalConstants.LOGO, "TPP Logo");
-        logo.getStyle().set("height", "170px");
+        logo.getStyle().set("height", "200px");
         add(logo);
     }
 
@@ -48,7 +47,7 @@ public final class Hero extends VerticalLayout implements StyledComponent {
         delimiter.setWidth("100px");
         delimiter.setHeight("3px");
         delimiter.getStyle()
-                .set("margin", "0 auto 0.2em auto")
+                .set("margin", "0 auto 0.3em auto")
                 .set("background", "white");
         add(delimiter);
     }
@@ -62,14 +61,16 @@ public final class Hero extends VerticalLayout implements StyledComponent {
     }
 
     private void addLinkToProjectPage() {
-        Component linkToProjectPage = new TPPRouterLink("Browse Projects", ProjectPage.class);
+        TPPRouterLink linkToProjectPage = new TPPRouterLink("Browse Projects", ProjectPage.class);
+        linkToProjectPage.getElement().getStyle()
+                .set("margin-top", "50px");
         add(linkToProjectPage);
     }
 
     private void styleHeroText(HtmlComponent component) {
         component.setWidth("50%");
         component.getStyle()
-                .set("margin", "0.7em 0")
+                .set("margin", "0.9em 0em 0.8em 0em")
                 .set("text-align", "center")
                 .set("color", "white");
     }
@@ -80,8 +81,8 @@ public final class Hero extends VerticalLayout implements StyledComponent {
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         getStyle()
-                .set("height", "700px")
-                .set("padding", "100px 0px")
+                .set("height", "auto")
+                .set("padding", "120px 0px")
                 .set("background-color", Colors.TPP_BLUE_COLOR.toString());
     }
 }

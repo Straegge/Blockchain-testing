@@ -18,41 +18,42 @@ public final class Usage extends HorizontalLayout implements StyledComponent {
 
         //TODO: Add Image
 
-        VerticalLayout usage = new VerticalLayout();
-        usage.add(usageTitle());
-        usage.add(usageContent());
+        VerticalLayout usageLayout = new VerticalLayout(
+                usageTitle(),
+                usageContent()
+        );
+        usageLayout.getStyle()
+                .set("width", "35%")
+                .set("margin", "50px 20px");
 
-        add(usage);
+        add(usageLayout);
     }
 
     private HtmlComponent usageTitle() {
         //TODO: Write usage title
-        HtmlComponent usageTitle = new H2(
+        return new H2(
                 "Usage Title"
         );
-        usageTitle.setWidth("30%");
-        return usageTitle;
     }
 
     private HtmlComponent usageContent() {
         //TODO: Write usage content
-        HtmlComponent usageContent = new Paragraph(
+        return new Paragraph(
                 "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
                         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
         );
-        usageContent.setWidth("30%");
-        return usageContent;
     }
 
     @Override
     public void style() {
-        setHeight("700px");
-        setWidthFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultVerticalComponentAlignment(Alignment.CENTER);
         getStyle()
-                .set("margin", "0px")
-                .set("padding", "0px")
+                .set("width", "90%")
+                .set("height", "auto")
+                .set("padding", "0")
+                .set("margin", "0px 0px 10px 0px")
+                .set("box-shadow", "rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px")
                 .set("background-color", Colors.DEFAULT_LANDING_PAGE_USAGE_COLOR.toString());
     }
 }
