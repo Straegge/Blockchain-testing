@@ -1,9 +1,9 @@
 package com.the_pangaea_paradigm.ui.components.projectpage;
 
+import com.the_pangaea_paradigm.Application;
 import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
 import com.the_pangaea_paradigm.ui.dialogs.ProjectCreationDialog;
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
@@ -23,16 +23,22 @@ public class ProjectActionContainer extends HorizontalLayout implements StyledCo
         style();
 
         addCreateProjectButton();
+        addCurrentProjectListFileIPFSHash();
 
         return this;
     }
 
     private void addCreateProjectButton() {
-        Component createProjectButton = new TPPButton(
+        TPPButton createProjectButton = new TPPButton(
                 "Create Project",
                 buttonClickEvent -> projectCreationDialog.open()
         );
+        createProjectButton.getElement().getStyle().set("margin-right", "30px");
         add(createProjectButton);
+    }
+
+    private void addCurrentProjectListFileIPFSHash() {
+        add("Projects currently stored under this hash: " + Application.PROJECT_LIST_FILE_IPFS_HASH.toString());
     }
 
     @Override
