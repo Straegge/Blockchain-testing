@@ -3,7 +3,7 @@ package com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers
 import com.the_pangaea_paradigm.backend.dto.Project;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
 import com.the_pangaea_paradigm.ui.dialogs.ProjectApplicationDialog;
-import com.vaadin.flow.component.Component;
+import com.the_pangaea_paradigm.utilities.Colors;
 import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Paragraph;
@@ -27,37 +27,45 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
         this.project = project;
 
         VerticalLayout projectDetailsLayout = new VerticalLayout();
-        projectDetailsLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.EVENLY);
+        projectDetailsLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.CENTER);
         projectDetailsLayout.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.STRETCH);
-        style(projectDetailsLayout, true);
+        projectDetailsLayout.getStyle()
+                .set("border-width", "2px")
+                .set("border-style", "solid")
+                .set("border-color", Colors.TPP_BLUE_COLOR.toString())
+                .set("border-radius", "0");
 
-        HorizontalLayout projectAndInitiatorLayout = createProjectAndInitiatorLayout();
+        HorizontalLayout projectAndInitiatorLayout = new HorizontalLayout(
+                createProjectLayout(),
+                createInitiatorLayout()
+        );
+        style(projectAndInitiatorLayout);
 
-        VerticalLayout descriptionLayout = createDescriptionLayout();
+        HorizontalLayout descriptionLayout = new HorizontalLayout(
+                createDescriptionLayout()
+        );
+        style(descriptionLayout);
 
-        VerticalLayout skillSetsLayout = createSkillSetsLayout();
-
-        VerticalLayout addressLayout = createAddressLayout();
-
-        VerticalLayout applicationLayout = createApplicationLayout();
+        HorizontalLayout skillSetsAndAddressLayout = new HorizontalLayout(
+                createSkillSetsLayout(),
+                createAddressLayout()
+        );
+        style(skillSetsAndAddressLayout);
 
         projectDetailsLayout.add(
                 projectAndInitiatorLayout,
                 descriptionLayout,
-                skillSetsLayout,
-                addressLayout,
-                applicationLayout
+                skillSetsAndAddressLayout,
+                new HorizontalLayout(
+                        createApplicationLayout()
+                )
         );
+
         return projectDetailsLayout;
     }
 
-    private HorizontalLayout createProjectAndInitiatorLayout() {
-        HorizontalLayout projectAndInitiatorLayout = new HorizontalLayout();
-        projectAndInitiatorLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.EVENLY);
-        style(projectAndInitiatorLayout, true);
-
+    private VerticalLayout createProjectLayout() {
         VerticalLayout projectLayout = new VerticalLayout();
-        style(projectLayout, false);
 
         HtmlComponent projectKey = new H3(
                 "Project"
@@ -65,11 +73,17 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
         HtmlComponent projectValue = new Paragraph(
                 project.getName()
         );
-        projectLayout.add(projectKey);
-        projectLayout.add(projectValue);
 
+        projectLayout.add(
+                projectKey,
+                projectValue
+        );
+
+        return projectLayout;
+    }
+
+    private VerticalLayout createInitiatorLayout() {
         VerticalLayout initiatorLayout = new VerticalLayout();
-        style(initiatorLayout, false);
 
         HtmlComponent initiatorKey = new H3(
                 "Initiator"
@@ -77,19 +91,17 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
         HtmlComponent initiatorValue = new Paragraph(
                 project.getInitiatorName()
         );
-        initiatorLayout.add(initiatorKey);
-        initiatorLayout.add(initiatorValue);
 
-        projectAndInitiatorLayout.add(
-                projectLayout,
-                initiatorLayout
+        initiatorLayout.add(
+                initiatorKey,
+                initiatorValue
         );
-        return projectAndInitiatorLayout;
+
+        return initiatorLayout;
     }
 
     private VerticalLayout createDescriptionLayout() {
         VerticalLayout descriptionLayout = new VerticalLayout();
-        style(descriptionLayout, true);
 
         HtmlComponent descriptionKey = new H3(
                 "Description"
@@ -102,12 +114,12 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
                 descriptionKey,
                 descriptionValue
         );
+
         return descriptionLayout;
     }
 
     private VerticalLayout createSkillSetsLayout() {
         VerticalLayout skillSetsLayout = new VerticalLayout();
-        style(skillSetsLayout, true);
 
         HtmlComponent skillSetsKey = new H3(
                 "Skill Sets"
@@ -124,12 +136,12 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
                 skillSetsKey,
                 skillSetsValue
         );
+
         return skillSetsLayout;
     }
 
     private VerticalLayout createAddressLayout() {
         VerticalLayout addressLayout = new VerticalLayout();
-        style(addressLayout, true);
 
         HtmlComponent addressKey = new H3(
                 "Ethereum Address"
@@ -142,27 +154,32 @@ public class RenderProjectAsTableItemDetails implements ProjectRenderer {
                 addressKey,
                 addressValue
         );
+
         return addressLayout;
     }
 
     private VerticalLayout createApplicationLayout() {
         VerticalLayout applicationLayout = new VerticalLayout();
-        style(applicationLayout, true);
+        applicationLayout.setAlignItems(FlexComponent.Alignment.END);
 
-        Component applicationButton = new TPPButton(
+        TPPButton applicationButton = new TPPButton(
                 "Apply to Project",
                 buttonClickEvent -> new ProjectApplicationDialog(project).open()
         );
+        applicationButton.getContent().getStyle()
+                .set("width", "230px")
+                .set("height", "50px")
+                .set("margin-right", "90px");
 
         applicationLayout.add(
                 applicationButton
         );
+
         return applicationLayout;
     }
 
-    private void style(ThemableLayout layout, boolean padded) {
-        layout.setPadding(padded);
-        layout.setMargin(false);
-        layout.setSpacing(false);
+    private void style(ThemableLayout layout) {
+        layout.getElement().getStyle().set("box-shadow", "rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px");
+        layout.setMargin(true);
     }
 }
