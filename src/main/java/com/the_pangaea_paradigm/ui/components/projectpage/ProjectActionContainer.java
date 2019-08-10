@@ -42,7 +42,7 @@ public class ProjectActionContainer extends HorizontalLayout implements StyledCo
     }
 
     private void addCurrentProjectListFileIPFSHash() {
-        add("Projects currently stored under this hash: " + Application.PROJECT_LIST_FILE_IPFS_HASH.toString());
+        add("Projects currently stored under: " + Application.PROJECT_LIST_FILE_IPFS_HASH.toString());
     }
 
     @Override
