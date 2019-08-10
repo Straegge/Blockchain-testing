@@ -2,7 +2,6 @@ package com.the_pangaea_paradigm.ui.components.landingpage;
 
 import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.utilities.Colors;
-import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -18,30 +17,32 @@ public final class Description extends HorizontalLayout implements StyledCompone
 
         //TODO: Add Image
 
-        VerticalLayout descriptionLayout = new VerticalLayout(
-                descriptionTitle(),
-                descriptionContent()
-        );
-        descriptionLayout.getStyle()
+        VerticalLayout description = createDescription();
+        description.getStyle()
                 .set("width", "35%")
                 .set("margin", "50px 20px");
 
-        add(descriptionLayout);
+        add(description);
     }
 
-    private HtmlComponent descriptionTitle() {
-        //TODO: Write description title
-        return new H2(
-                "Description Title"
-        );
-    }
+    private VerticalLayout createDescription() {
+        H2 title = new H2("A Global Workspace");
 
-    private HtmlComponent descriptionContent() {
-        //TODO: Write description content
-        return new Paragraph(
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
-                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        Paragraph firstParagraph = new Paragraph(
+                "The basis of all change is gathering people who align with your vision. No one can change the " +
+                        "world alone. But the concept of creating and growing an organisation locally is not only " +
+                        "inefficient, it's also far too often ineffective. There could be ideal participants halfway " +
+                        "around the world, and you would never know."
         );
+
+        Paragraph secondParagraph = new Paragraph(
+                "Our vision is a globally interconnected network of people working together towards aligned goals. " +
+                        "Using today's co-working and communication technologies, we believe that anything which can " +
+                        "be achieved by a group of people working in the same location can be accomplished far more " +
+                        "reliably by an online community; a digital organisation."
+        );
+
+        return new VerticalLayout(title, firstParagraph, secondParagraph);
     }
 
     @Override

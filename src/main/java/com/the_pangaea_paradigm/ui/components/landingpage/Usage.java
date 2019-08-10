@@ -2,7 +2,6 @@ package com.the_pangaea_paradigm.ui.components.landingpage;
 
 import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.utilities.Colors;
-import com.vaadin.flow.component.HtmlComponent;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -18,30 +17,31 @@ public final class Usage extends HorizontalLayout implements StyledComponent {
 
         //TODO: Add Image
 
-        VerticalLayout usageLayout = new VerticalLayout(
-                usageTitle(),
-                usageContent()
-        );
-        usageLayout.getStyle()
+        VerticalLayout usage = new VerticalLayout(createUsage());
+        usage.getStyle()
                 .set("width", "35%")
                 .set("margin", "50px 20px");
 
-        add(usageLayout);
+        add(usage);
     }
 
-    private HtmlComponent usageTitle() {
-        //TODO: Write usage title
-        return new H2(
-                "Usage Title"
-        );
-    }
+    private VerticalLayout createUsage() {
+        H2 title = new H2("Create Or Apply, Permanently");
 
-    private HtmlComponent usageContent() {
-        //TODO: Write usage content
-        return new Paragraph(
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
-                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        Paragraph firstParagraph = new Paragraph(
+                "Projects created in the application are persistently saved on IPFS. They're accessible to " +
+                        "everyone forever, we only provide a usable interface for interaction. The IPFS hash of the " +
+                        "file holding the existing Project is freely viewable and can be used to extend or remodel " +
+                        "the functionality of the application."
         );
+
+        Paragraph secondParagraph = new Paragraph(
+                "Anyone can create an altruistic Project, and anyone can apply to join. A Project Initiator has " +
+                        "the possibility to describe essential skills needed for the Project, but the most important " +
+                        "skill is the will to learn and provide help in any way possible."
+        );
+
+        return new VerticalLayout(title, firstParagraph, secondParagraph);
     }
 
     @Override
