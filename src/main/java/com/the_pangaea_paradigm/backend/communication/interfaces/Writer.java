@@ -1,4 +1,4 @@
-package com.the_pangaea_paradigm.backend.communication;
+package com.the_pangaea_paradigm.backend.communication.interfaces;
 
 import com.the_pangaea_paradigm.backend.dto.Applicant;
 import com.the_pangaea_paradigm.backend.dto.Project;

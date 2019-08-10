@@ -6,7 +6,7 @@ import io.ipfs.api.IPFS;
  * Stores global constants used in the application. The constants are not interchangeable,
  * so this isn't the right use case for an Enum.
  */
-public class GlobalConstants {
+public final class GlobalConstants {
     public static final String LOGO = "frontend/images/Logo.png";
     public static final String LOGO_WITH_NAME = "frontend/images/LogoWithName.png";
     public static final String GITHUB_ADDRESS = "https://github.com/Straegge/the-pangaea-paradigm";

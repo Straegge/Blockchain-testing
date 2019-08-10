@@ -1,5 +1,6 @@
 package com.the_pangaea_paradigm.backend.communication;
 
+import com.the_pangaea_paradigm.backend.communication.interfaces.Writer;
 import com.the_pangaea_paradigm.backend.dto.Applicant;
 import com.the_pangaea_paradigm.backend.dto.Project;
 

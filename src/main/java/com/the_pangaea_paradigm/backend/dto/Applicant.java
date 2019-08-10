@@ -33,7 +33,18 @@ public class Applicant implements Serializable {
     }
 
     public Applicant(
-            @NotBlank(message = "Please enter the name you wish to apply with") @Size(max = 100, message = "Name must be less than or equal to 100 characters") String name, @NotBlank(message = "Please write a short description of yourself") @Size(max = 500, message = "Description must be less than or equal to 500 characters") String description, @Size(max = 200, message = "Please list your skill sets in less than 200 characters") String skillSets, @Email @NotBlank(message = "Please enter your E-Mail address") String emailAddress, @Size(max = 200, message = "Please list your other contact details in less than 200 characters") String otherContactDetails) {
+            @NotBlank(message = "Please enter the name you wish to apply with")
+            @Size(max = 100, message = "Name must be less than or equal to 100 characters")
+                    String name,
+            @NotBlank(message = "Please write a short description of yourself")
+            @Size(max = 500, message = "Description must be less than or equal to 500 characters")
+                    String description,
+            @Size(max = 200, message = "Please list your skill sets in less than 200 characters")
+                    String skillSets,
+            @Email @NotBlank(message = "Please enter your E-Mail address")
+                    String emailAddress,
+            @Size(max = 200, message = "Please list your other contact details in less than 200 characters")
+                    String otherContactDetails) {
         this.name = name;
         this.description = description;
         this.skillSets = skillSets;
