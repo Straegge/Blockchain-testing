@@ -5,6 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * An Applicant entity.
@@ -57,17 +58,6 @@ public class Applicant implements Serializable {
         this.otherContactDetails = otherContactDetails;
     }
 
-    @Override
-    public String toString() {
-        return "Applicant{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", skillSets='" + skillSets + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
-                ", otherContactDetails='" + otherContactDetails + '\'' +
-                '}';
-    }
-
     public String getName() {
         return name;
     }
@@ -106,5 +96,33 @@ public class Applicant implements Serializable {
 
     public void setOtherContactDetails(String otherContactDetails) {
         this.otherContactDetails = otherContactDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "Applicant{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", skillSets='" + skillSets + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", otherContactDetails='" + otherContactDetails + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Applicant)) return false;
+        Applicant applicant = (Applicant) o;
+        return getName().equals(applicant.getName()) &&
+                getDescription().equals(applicant.getDescription()) &&
+                getSkillSets().equals(applicant.getSkillSets()) &&
+                getEmailAddress().equals(applicant.getEmailAddress()) &&
+                getOtherContactDetails().equals(applicant.getOtherContactDetails());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getDescription(), getSkillSets(), getEmailAddress(), getOtherContactDetails());
     }
 }

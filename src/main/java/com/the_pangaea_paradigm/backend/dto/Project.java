@@ -5,6 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * A Project entity.
@@ -74,19 +75,6 @@ public class Project implements Serializable {
         this.ethereumAddress = ethereumAddress;
     }
 
-    @Override
-    public String toString() {
-        return "Project{" +
-                "name='" + name + '\'' +
-                ", initiatorName='" + initiatorName + '\'' +
-                ", shortDescription='" + shortDescription + '\'' +
-                ", longDescription='" + longDescription + '\'' +
-                ", requiredSkillSets='" + requiredSkillSets + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
-                ", ethereumAddress='" + ethereumAddress + '\'' +
-                '}';
-    }
-
     public String getName() {
         return name;
     }
@@ -141,5 +129,37 @@ public class Project implements Serializable {
 
     public void setEthereumAddress(String ethereumAddress) {
         this.ethereumAddress = ethereumAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "name='" + name + '\'' +
+                ", initiatorName='" + initiatorName + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", longDescription='" + longDescription + '\'' +
+                ", requiredSkillSets='" + requiredSkillSets + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", ethereumAddress='" + ethereumAddress + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Project)) return false;
+        Project project = (Project) o;
+        return getName().equals(project.getName()) &&
+                getInitiatorName().equals(project.getInitiatorName()) &&
+                getShortDescription().equals(project.getShortDescription()) &&
+                getLongDescription().equals(project.getLongDescription()) &&
+                Objects.equals(getRequiredSkillSets(), project.getRequiredSkillSets()) &&
+                getEmailAddress().equals(project.getEmailAddress()) &&
+                Objects.equals(getEthereumAddress(), project.getEthereumAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getInitiatorName(), getShortDescription(), getLongDescription(), getRequiredSkillSets(), getEmailAddress(), getEthereumAddress());
     }
 }
