@@ -1,4 +1,4 @@
-package com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers;
+package com.the_pangaea_paradigm.ui.renderers.projectrenderers;
 
 import com.the_pangaea_paradigm.backend.dto.Project;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;

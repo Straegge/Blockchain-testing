@@ -1,9 +1,9 @@
-package com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers;
+package com.the_pangaea_paradigm.ui.renderers.projectlistrenderers;
 
 import com.the_pangaea_paradigm.backend.dto.Project;
 import com.the_pangaea_paradigm.backend.dto.ProjectList;
-import com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers.ProjectRenderer;
-import com.the_pangaea_paradigm.ui.components.global.renderers.projectrenderers.RenderProjectAsTableItemDetails;
+import com.the_pangaea_paradigm.ui.renderers.projectrenderers.ProjectRenderer;
+import com.the_pangaea_paradigm.ui.renderers.projectrenderers.RenderProjectAsTableItemDetails;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 

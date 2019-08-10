@@ -1,4 +1,4 @@
-package com.the_pangaea_paradigm.ui.components.global.renderers.projectlistrenderers;
+package com.the_pangaea_paradigm.ui.renderers.projectlistrenderers;
 
 import com.the_pangaea_paradigm.backend.dto.ProjectList;
 import com.vaadin.flow.component.Component;
