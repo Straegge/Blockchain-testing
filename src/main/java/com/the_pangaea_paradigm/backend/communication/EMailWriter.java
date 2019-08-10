@@ -34,7 +34,7 @@ public class EMailWriter implements Writer {
                 .append("Name%3A%20")
                 .append(URLEncoder.encode(applicant.getName(), "UTF-8").replace("+", "%20"))
                 .append("%0D%0A")
-                .append("Description%3A%20")
+                .append("Description%3A%0D%0A")
                 .append(URLEncoder.encode(applicant.getDescription(), "UTF-8").replace("+", "%20"))
                 .append("%0D%0A")
                 .append("Skill%20Sets%3A%20")

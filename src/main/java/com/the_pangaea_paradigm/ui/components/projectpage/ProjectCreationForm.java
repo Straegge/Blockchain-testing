@@ -6,6 +6,7 @@ import com.the_pangaea_paradigm.ui.components.global.StyledComponent;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.notification.Notification;
@@ -125,10 +126,18 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
                 try {
                     projectServiceInterface.save(projectBeingEdited);
 
-                    Notification notification = new Notification("Project was successfully created!", 0, Notification.Position.MIDDLE);
+                    Notification notification = new Notification(
+                            "Project was successfully created!",
+                            5000,
+                            Notification.Position.MIDDLE);
                     notification.open();
+
+                    UI.getCurrent().getPage().reload();
                 } catch (IOException e) {
-                    Notification notification = new Notification("Project Creation failed!", 0, Notification.Position.MIDDLE);
+                    Notification notification = new Notification(
+                            "Project Creation failed! " + e.getMessage(),
+                            5000,
+                            Notification.Position.TOP_CENTER);
                     notification.open();
                 }
             }
@@ -143,8 +152,10 @@ public class ProjectCreationForm extends Composite<FormLayout> implements Styled
 
     private TPPButton createCancelButton() {
         TPPButton cancelButton = new TPPButton("Cancel", buttonClickEvent -> {
-            Dialog parent = (Dialog) getParent().orElseThrow(() -> new IllegalStateException("The dialog you tried to close no longer exists"));
-            parent.close();
+            Dialog dialog = (Dialog) getParent().orElseThrow(
+                    () -> new IllegalStateException("The dialog you tried to close no longer exists")
+            );
+            dialog.close();
         });
 
         cancelButton.getContent().setWidth("180px");

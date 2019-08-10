@@ -22,7 +22,7 @@ public class ProjectService implements ProjectServiceInterface {
     private ProjectDao projectDao;
 
     @Override
-    public ProjectList fetchAllProjects() {
+    public ProjectList fetchAllProjects() throws IOException {
 
         return projectDao.getAll();
     }

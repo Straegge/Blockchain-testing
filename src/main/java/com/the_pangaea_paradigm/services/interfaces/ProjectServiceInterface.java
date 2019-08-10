@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public interface ProjectServiceInterface {
 
-    ProjectList fetchAllProjects();
+    ProjectList fetchAllProjects() throws IOException;
 
     void save(Project project) throws IOException;
 }

@@ -10,9 +10,13 @@ import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.DetachEvent;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.io.IOException;
+import java.util.Optional;
 
 /**
  * Container for the rendered ProjectList. Is itself a Spring Bean so it can be autowired into the ProjectPage.
@@ -31,8 +35,19 @@ public class ProjectListContainer extends Component implements StyledComponent, 
     public Component create() {
         style();
 
-        ProjectList projectList = projectServiceInterface.fetchAllProjects();
-        render(projectList);
+        Optional<ProjectList> projectList = Optional.empty();
+
+        try {
+            projectList = Optional.ofNullable(projectServiceInterface.fetchAllProjects());
+        } catch (IOException e) {
+            Notification notification = new Notification(
+                    "An error occurred while getting the Projects! " + e.getMessage(),
+                    5000,
+                    Notification.Position.TOP_CENTER);
+            notification.open();
+        }
+
+        render(projectList.orElse(new ProjectList()));
 
         return this;
     }

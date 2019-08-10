@@ -22,7 +22,7 @@ public interface ProjectDao {
 
     Optional<Project> get(long id);
 
-    ProjectList getAll();
+    ProjectList getAll() throws IOException;
 
     void save(Project project) throws IOException;
 

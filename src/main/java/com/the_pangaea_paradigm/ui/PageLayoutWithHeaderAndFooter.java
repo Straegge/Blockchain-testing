@@ -33,6 +33,9 @@ public abstract class PageLayoutWithHeaderAndFooter extends VerticalLayout {
                 .set("background-color", Colors.DEFAULT_BACKGROUND_COLOR.toString());
         add(header, content);
 
+        getElement().executeJavaScript("document.documentElement.style.backgroundColor = '"
+                + Colors.DEFAULT_BACKGROUND_COLOR.toString()
+                + "'");
         getElement().executeJavaScript("document.documentElement.style.height = '100%'");
         getElement().executeJavaScript("document.body.style.overflowX = 'hidden'");
     }
