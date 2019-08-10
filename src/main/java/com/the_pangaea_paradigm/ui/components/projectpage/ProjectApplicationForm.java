@@ -2,7 +2,7 @@ package com.the_pangaea_paradigm.ui.components.projectpage;
 
 import com.the_pangaea_paradigm.backend.dataobjects.Applicant;
 import com.the_pangaea_paradigm.backend.dataobjects.Project;
-import com.the_pangaea_paradigm.services.ProjectServiceInterface;
+import com.the_pangaea_paradigm.services.ApplicantService;
 import com.the_pangaea_paradigm.ui.components.global.TPPButton;
 import com.the_pangaea_paradigm.utilities.StyledComponent;
 import com.vaadin.flow.component.Component;
@@ -15,21 +15,14 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
-import com.vaadin.flow.spring.annotation.SpringComponent;
-import com.vaadin.flow.spring.annotation.UIScope;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 /**
  *
  */
-@SpringComponent
-@UIScope
 public class ProjectApplicationForm extends Composite<FormLayout> implements StyledComponent {
 
-    @Autowired
-    private ProjectServiceInterface projectServiceInterface;
     private BeanValidationBinder<Applicant> binder = new BeanValidationBinder<>(Applicant.class);
     private Applicant applicantBeingEdited = new Applicant();
 
@@ -103,18 +96,15 @@ public class ProjectApplicationForm extends Composite<FormLayout> implements Sty
 
     private TPPButton createApplyButton(Project project) {
         TPPButton createButton = new TPPButton("Apply", buttonClickEvent -> {
-            System.out.println(project);
-
             if (binder.writeBeanIfValid(applicantBeingEdited)) {
                 try {
-                    //TODO: Send E-Mail to project initiator
-
-                    Notification notification = new Notification("Project was successfully created!", 0, Notification.Position.MIDDLE);
-                    notification.open();
-
-                    throw new IOException();
-                } catch (IOException e) {
-                    Notification notification = new Notification("Project Creation failed!", 0, Notification.Position.MIDDLE);
+                    getElement().executeJavaScript(new ApplicantService().createApplicationTemplate(applicantBeingEdited, project));
+                } catch (UnsupportedEncodingException e) {
+                    Notification notification = new Notification(
+                            "Project Creation failed! " + e.getMessage(),
+                            5000,
+                            Notification.Position.TOP_CENTER
+                    );
                     notification.open();
                 }
             }

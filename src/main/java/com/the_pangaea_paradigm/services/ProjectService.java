@@ -17,7 +17,6 @@ import java.io.IOException;
 @Service
 public class ProjectService implements ProjectServiceInterface {
 
-    //No Qualifier needed for autowiring as long as there is only one ProjectDao (IPFSProjectDao)
     @Autowired
     private ProjectDao projectDao;
 
