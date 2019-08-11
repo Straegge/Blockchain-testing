@@ -24,6 +24,10 @@ public class ProjectList implements Serializable {
         return projects;
     }
 
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
+    }
+
     @Override
     public String toString() {
         return "ProjectList{" +

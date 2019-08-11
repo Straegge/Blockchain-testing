@@ -30,6 +30,7 @@ public class ProjectTest {
         assertNotEquals(o1, o2);
 
         o2.setName("name");
+
         assertEquals(o1, o2);
     }
 }
