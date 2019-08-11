@@ -24,8 +24,9 @@ import java.util.logging.Logger;
 @Repository
 public class IPFSProjectDao implements ProjectDao {
 
-    private Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private Logger logger = Logger.getLogger(IPFSProjectDao.class.getName());
+    private Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private IPFS ipfs = GlobalConstants.INFURA_IPFS_GATEWAY_INSTANCE;
 
     @Override
     public Optional<Project> get(long id) {
@@ -38,8 +39,7 @@ public class IPFSProjectDao implements ProjectDao {
 
         //Fetch ProjectList from IPFS
         String projectListAsString = new String(
-                new IPFS(GlobalConstants.INFURA_IPFS_GATEWAY_ADDRESS)
-                        .cat(projectListMultihash)
+                ipfs.cat(projectListMultihash)
         );
 
         return gson.fromJson(projectListAsString, ProjectList.class);
@@ -60,8 +60,7 @@ public class IPFSProjectDao implements ProjectDao {
 
         //Add new ProjectList to IPFS
         MerkleNode addResult =
-                new IPFS(GlobalConstants.INFURA_IPFS_GATEWAY_ADDRESS)
-                        .add(projectListStreamable, true, false).get(0);
+                ipfs.add(projectListStreamable, true, false).get(0);
 
         //Update Hash pointing to ProjectList
         Application.PROJECT_LIST_FILE_IPFS_HASH = addResult.hash;
