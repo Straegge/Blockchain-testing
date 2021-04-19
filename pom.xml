@@ -19,7 +19,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- Dependencies -->
-		<vaadin.version>13.0.11</vaadin.version>
+		<vaadin.version>14.4.10</vaadin.version>
 		<vaadin.widgetset.mode>local</vaadin.widgetset.mode>
 	</properties>
 
